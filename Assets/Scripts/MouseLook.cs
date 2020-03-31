@@ -8,13 +8,13 @@ public class MouseLook : MonoBehaviour
     private GameObject placeHolder;
     public GameObject RaycastedObj { get { return raycastedObj; } set { raycastedObj = value; } }
     [SerializeField] private LayerMask layerMaskInteract;
-    // public Image uiCrosshair;
+    public Image uiCrosshair;
     public Transform playerBody;
     float xRotation = 0f;
     // ************************************************************
     // ********************** Sensitivity *************************
     // ************************************************************
-    public float Sensitivity { get { return currentSensitivity; } }
+    // public float Sensitivity { get { return currentSensitivity; } }
     float currentSensitivity;
     public float maxSensitivity = 100f;
     // public TextMeshProUGUI sensitivityTxt;
@@ -48,25 +48,25 @@ public class MouseLook : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 4f, layerMaskInteract.value))
         {
             RaycastedObj = hit.collider.gameObject;
-            // CrosshairActive();
+            CrosshairActive();
         }
         else
         {
             RaycastedObj = placeHolder;
-            // CrosshairNormal();
+            CrosshairNormal();
         }
 
     }
 
-    // void CrosshairActive()
-    // {
-    //     uiCrosshair.color = Color.red;
-    // }
+    void CrosshairActive()
+    {
+        uiCrosshair.color = Color.red;
+    }
 
-    // void CrosshairNormal()
-    // {
-    //     uiCrosshair.color = Color.white;
-    // }
+    void CrosshairNormal()
+    {
+        uiCrosshair.color = Color.white;
+    }
 
     // public void ChangeSensitivity(float amount)
     // {
