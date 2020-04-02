@@ -7896,7 +7896,7 @@ GameObject:
   - component: {fileID: 296606106}
   - component: {fileID: 296606105}
   - component: {fileID: 296606104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20336,7 +20336,7 @@ GameObject:
   - component: {fileID: 1006008960}
   - component: {fileID: 1006008959}
   - component: {fileID: 1006008958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hallway Floor Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24445,7 +24445,7 @@ GameObject:
   - component: {fileID: 1286673501}
   - component: {fileID: 1286673500}
   - component: {fileID: 1286673499}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1st Floor to 2nd Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31405,7 +31405,7 @@ GameObject:
   - component: {fileID: 1497916352}
   - component: {fileID: 1497916351}
   - component: {fileID: 1497916350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hallway Floor Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37082,7 +37082,7 @@ GameObject:
   - component: {fileID: 1661645877}
   - component: {fileID: 1661645876}
   - component: {fileID: 1661645875}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hallway Floor Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45330,7 +45330,7 @@ GameObject:
   - component: {fileID: 2102576594}
   - component: {fileID: 2102576593}
   - component: {fileID: 2102576592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main to 1st Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
