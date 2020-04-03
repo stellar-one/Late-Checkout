@@ -47973,7 +47973,7 @@ GameObject:
   - component: {fileID: 1775856191}
   - component: {fileID: 1775856190}
   - component: {fileID: 1775856189}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57184,7 +57184,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 1737796279}
-  speed: 8
+  speed: 6
   jumpHeight: 2
   gravity: -9.81
   groundDistance: 0.4
