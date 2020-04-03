@@ -35,10 +35,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("e")) // interact key
         {
-            if (target.CompareTag("Elevator Buttons"))
+           /* if (target.CompareTag("Elevator Buttons"))
             {
                 Debug.Log("Calling Elevator...");
-            }
+            }  */
 
             if (target.CompareTag("Door") && !target.GetComponent<Animator>().GetBool("Open"))
             {
