@@ -32,12 +32,18 @@ public class PlayerController : MonoBehaviour
 
         target = Camera.main.GetComponent<MouseLook>().RaycastedObj;
 
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("e")) // interact key
         {
             if (target.CompareTag("Elevator Buttons"))
             {
                 Debug.Log("Calling Elevator...");
                 // need to implement a way for the elevator to go to the player's current floor
+            }
+
+            if (target.CompareTag("Door"))
+            {
+                Debug.Log("Opening door...");
+                // need to implement a way for the door to open
             }
         }
 
