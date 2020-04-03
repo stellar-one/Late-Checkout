@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Door : MonoBehaviour
 {
@@ -9,9 +7,5 @@ public class Door : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-
-
-      
-
     }
 }

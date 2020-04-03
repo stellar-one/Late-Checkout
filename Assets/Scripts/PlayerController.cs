@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public float groundDistance = 0.4f;
     bool isGrounded;
     GameObject target;
-    public GameObject door;
     
 
     void Update()
@@ -34,8 +33,6 @@ public class PlayerController : MonoBehaviour
 
         target = Camera.main.GetComponent<MouseLook>().RaycastedObj;
 
-        door = GetComponent<Door>()._animator;
-
         if (Input.GetKeyDown("e")) // interact key
         {
            // if (target.CompareTag("Elevator Buttons"))
@@ -44,27 +41,18 @@ public class PlayerController : MonoBehaviour
                 // need to implement a way for the elevator to go to the player's current floor
            // }
 
-            if (target.CompareTag("Door"))
+            if (target.CompareTag("Door") && !target.GetComponent<Animator>().GetBool("Open"))
             {
- 
-                Debug.Log("Opening door...");
-
-
-                if (door.GetBool("Open"))
-                {
-                    door.SetBool("Open", true);
-                }
-
-                if (!door.GetBool("Open"))
-                {
-                    door.SetBool("Open", false);
-                }
-                // need to implement a way for the door to open
+                Debug.Log("Opening...");
+                target.GetComponent<Animator>().SetBool("Open", true);
             }
 
-
-
-
+            else if (target.CompareTag("Door") && target.GetComponent<Animator>().GetBool("Open"))
+            {
+                Debug.Log("Closing...");
+                target.GetComponent<Animator>().SetBool("Open", false);
+            }
+            
         }
 
 
