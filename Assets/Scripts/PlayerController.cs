@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float groundDistance = 0.4f;
     bool isGrounded;
     GameObject target;
-    GameObject door;
+    public GameObject door;
     
 
     void Update()
