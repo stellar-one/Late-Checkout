@@ -11,16 +11,11 @@ public class MouseLook : MonoBehaviour
     public Image uiCrosshair;
     public Transform playerBody;
     float xRotation = 0f;
-    // ************************************************************
-    // ********************** Sensitivity *************************
-    // ************************************************************
     // public float Sensitivity { get { return currentSensitivity; } }
     float currentSensitivity;
     public float maxSensitivity = 100f;
     // public TextMeshProUGUI sensitivityTxt;
-    // ************************************************************
-    // ************************************************************
-    // ************************************************************
+    public TextMeshProUGUI iteractableTxt;
 
     void Start()
     {
@@ -48,11 +43,13 @@ public class MouseLook : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 4f, layerMaskInteract.value))
         {
             RaycastedObj = hit.collider.gameObject;
+            iteractableTxt.text = raycastedObj.name;
             CrosshairActive();
         }
         else
         {
             RaycastedObj = placeHolder;
+            iteractableTxt.text = "";
             CrosshairNormal();
         }
 
