@@ -35,11 +35,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("e")) // interact key
         {
-           // if (target.CompareTag("Elevator Buttons"))
-           // {
-             //   Debug.Log("Calling Elevator...");
-                // need to implement a way for the elevator to go to the player's current floor
-           // }
+            if (target.CompareTag("Elevator Buttons"))
+            {
+                Debug.Log("Calling Elevator...");
+            }
 
             if (target.CompareTag("Door") && !target.GetComponent<Animator>().GetBool("Open"))
             {
