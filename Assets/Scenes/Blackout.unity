@@ -57184,8 +57184,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 1737796279}
-  speed: 12
-  jumpHeight: 3
+  speed: 8
+  jumpHeight: 2
   gravity: -9.81
   groundDistance: 0.4
 --- !u!143 &2100854008
