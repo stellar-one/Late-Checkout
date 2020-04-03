@@ -31,22 +31,56 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
+            Jump();
         }
 
-        if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded)
         {
-            controller.height = 1.0f;
-            // transform.localScale = new Vector3(0f, .5f, 0f);
+            Sprint();
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.LeftShift) && isGrounded)
         {
-            controller.height = 2.0f;
-            // transform.localScale = new Vector3(0f, 1f, 0f);
+            Walk();
+        }
+
+        if(Input.GetKeyDown(KeyCode.LeftControl) && isGrounded)
+        {
+            Crouch();
+        }
+        else if(Input.GetKeyUp(KeyCode.LeftControl) && isGrounded)
+        {
+            Stand();
         }
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void Jump()
+    {
+        velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
+    }
+
+    void Sprint()
+    {
+        speed = 8f;
+    }
+
+    void Walk()
+    {
+        speed = 6f;
+    }
+
+    void Crouch()
+    {
+        transform.localScale = new Vector3(1f, .5f, 1f);
+        speed = 4f;
+    }
+
+    void Stand()
+    {
+        transform.localScale = new Vector3(1f, 1f, 1f);
+        speed = 6f;
     }
 }
