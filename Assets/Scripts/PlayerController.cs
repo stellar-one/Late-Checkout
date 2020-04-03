@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float gravity = -9.81f;
     public float groundDistance = 0.4f;
     bool isGrounded;
+    GameObject target;
 
     void Update()
     {
@@ -28,6 +29,17 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
+
+        target = Camera.main.GetComponent<MouseLook>().RaycastedObj;
+
+        if (Input.GetKeyDown("e"))
+        {
+            if (target.CompareTag("desk"))
+            {
+                PickupItem(target);
+            }
+        }
+
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -82,5 +94,16 @@ public class PlayerController : MonoBehaviour
     {
         transform.localScale = new Vector3(1f, 1f, 1f);
         speed = 6f;
+    }
+
+    void PickupItem(GameObject item)
+    {
+        Debug.Log("Adding " + item.name + "...");
+        // add item based on priority list:
+        // 1: Hand, if empty
+        // 2: Hotbox, if empty
+        // 3: Inventory, if empty
+        // 4: alert "Inventory full"
+        item.SetActive(false);
     }
 }
