@@ -34,6 +34,15 @@ public class PlayerController : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
         }
 
+        if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        {
+            controller.height = 1.0f;
+        }
+        else
+        {
+            controller.height = 2.0f;
+        }
+
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
