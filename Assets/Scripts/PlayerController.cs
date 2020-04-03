@@ -34,9 +34,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("e"))
         {
-            if (target.CompareTag("desk"))
+            if (target.CompareTag("Elevator Buttons"))
             {
-                PickupItem(target);
+                Debug.Log("Calling Elevator...");
+                // need to implement a way for the elevator to go to the player's current floor
             }
         }
 
