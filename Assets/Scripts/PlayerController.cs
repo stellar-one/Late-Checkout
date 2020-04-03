@@ -37,10 +37,12 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
         {
             controller.height = 1.0f;
+            // transform.localScale = new Vector3(0f, .5f, 0f);
         }
         else
         {
             controller.height = 2.0f;
+            // transform.localScale = new Vector3(0f, 1f, 0f);
         }
 
         velocity.y += gravity * Time.deltaTime;
