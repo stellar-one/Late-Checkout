@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Door
   - Elevator Buttons
+  - Openable
   layers:
   - Default
   - TransparentFX

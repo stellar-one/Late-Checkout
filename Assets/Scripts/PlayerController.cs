@@ -40,13 +40,13 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Calling Elevator...");
             }  */
 
-            if (target.CompareTag("Door") && !target.GetComponent<Animator>().GetBool("Open"))
+            if (target.CompareTag("Openable") && !target.GetComponent<Animator>().GetBool("Open"))
             {
                 Debug.Log("Opening...");
                 target.GetComponent<Animator>().SetBool("Open", true);
             }
 
-            else if (target.CompareTag("Door") && target.GetComponent<Animator>().GetBool("Open"))
+            else if (target.CompareTag("Openable") && target.GetComponent<Animator>().GetBool("Open"))
             {
                 Debug.Log("Closing...");
                 target.GetComponent<Animator>().SetBool("Open", false);
