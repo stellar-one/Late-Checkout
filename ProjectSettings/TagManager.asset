@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Elevator Buttons
   - Openable
+  - Item
   layers:
   - Default
   - TransparentFX

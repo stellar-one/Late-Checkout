@@ -51,6 +51,12 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Closing...");
                 target.GetComponent<Animator>().SetBool("Open", false);
             }
+
+            if (target.CompareTag("Item"))
+            {
+                Debug.Log("Picking up item...");
+                target.SetActive(false);
+            }
             
         }
 
