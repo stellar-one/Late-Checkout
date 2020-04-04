@@ -38,16 +38,7 @@ public class PlayerController : MonoBehaviour
             if (target.CompareTag("Elevator Buttons"))
             {
                 Debug.Log("Calling Elevator...");
-                if (!target.GetComponent<Elevator>().elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && !target.GetComponent<Elevator>().elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
-                {
-                    OpenElevatorDoors();
-                }
-
-                else if (target.GetComponent<Elevator>().elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && target.GetComponent<Elevator>().elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
-                {
-                    CloseElevatorDoors();
-                }
-                
+                target.GetComponent<Elevator>().CallElevator(true);                
             }
 
             if (target.CompareTag("Openable") && !target.GetComponent<Animator>().GetBool("Open"))
@@ -133,17 +124,5 @@ public class PlayerController : MonoBehaviour
         // 3: Inventory, if empty
         // 4: alert "Inventory full"
         item.SetActive(false);
-    }
-
-    void OpenElevatorDoors()
-    {
-        target.GetComponent<Elevator>().elevatorDoor_L.GetComponent<Animator>().SetBool("Open", true);
-        target.GetComponent<Elevator>().elevatorDoor_R.GetComponent<Animator>().SetBool("Open", true);
-    }
-
-    void CloseElevatorDoors()
-    {
-        target.GetComponent<Elevator>().elevatorDoor_L.GetComponent<Animator>().SetBool("Open", false);
-        target.GetComponent<Elevator>().elevatorDoor_R.GetComponent<Animator>().SetBool("Open", false);
     }
 }
