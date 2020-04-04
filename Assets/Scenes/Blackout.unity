@@ -19350,7 +19350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d01124bbed1bf4bbf5eef005249086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePlatform: {fileID: 1125796014}
+  elevator: {fileID: 1125796014}
   basement: {fileID: 1224234456}
   mainFloor: {fileID: 911716823}
   firstFloor: {fileID: 627976604}
