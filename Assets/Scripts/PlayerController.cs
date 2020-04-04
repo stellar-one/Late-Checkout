@@ -35,20 +35,28 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("e")) // interact key
         {
-           /* if (target.CompareTag("Elevator Buttons"))
+            if (target.CompareTag("Elevator Buttons"))
             {
                 Debug.Log("Calling Elevator...");
-            }  */
+                if (!target.GetComponent<CallElevator>().elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && !target.GetComponent<CallElevator>().elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
+                {
+                    OpenElevatorDoors();
+                }
+
+                else if (target.GetComponent<CallElevator>().elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && target.GetComponent<CallElevator>().elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
+                {
+                    CloseElevatorDoors();
+                }
+                
+            }
 
             if (target.CompareTag("Openable") && !target.GetComponent<Animator>().GetBool("Open"))
             {
-                Debug.Log("Opening...");
                 target.GetComponent<Animator>().SetBool("Open", true);
             }
 
             else if (target.CompareTag("Openable") && target.GetComponent<Animator>().GetBool("Open"))
             {
-                Debug.Log("Closing...");
                 target.GetComponent<Animator>().SetBool("Open", false);
             }
 
@@ -125,5 +133,17 @@ public class PlayerController : MonoBehaviour
         // 3: Inventory, if empty
         // 4: alert "Inventory full"
         item.SetActive(false);
+    }
+
+    void OpenElevatorDoors()
+    {
+        target.GetComponent<CallElevator>().elevatorDoor_L.GetComponent<Animator>().SetBool("Open", true);
+        target.GetComponent<CallElevator>().elevatorDoor_R.GetComponent<Animator>().SetBool("Open", true);
+    }
+
+    void CloseElevatorDoors()
+    {
+        target.GetComponent<CallElevator>().elevatorDoor_L.GetComponent<Animator>().SetBool("Open", false);
+        target.GetComponent<CallElevator>().elevatorDoor_R.GetComponent<Animator>().SetBool("Open", false);
     }
 }
