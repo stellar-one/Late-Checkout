@@ -4,12 +4,14 @@ public class Elevator : MonoBehaviour
 {
     public GameObject movePlatform;
 
-    // firstFloor
-    // secondFloor
-    // thirdFloor
+    public GameObject basement;
+    public GameObject mainFloor;
+    public GameObject firstFloor;
+    public GameObject secondFloor;
 
     private void OnTriggerStay(Collider other) 
     {
-        movePlatform.transform.position += movePlatform.transform.up * Time.deltaTime;
+        Debug.Log("Select the floor you wish to go to...");
+        // movePlatform.transform.position += movePlatform.transform.up * Time.deltaTime;
     }
 }
