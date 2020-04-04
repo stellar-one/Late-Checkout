@@ -6,7 +6,9 @@ public class Elevator : MonoBehaviour
     public GameObject basement;
     public GameObject mainFloor;
     public GameObject firstFloor;
-    public GameObject secondFloor;
+    public GameObject roof;
+    public GameObject elevatorDoor_L;
+    public GameObject elevatorDoor_R;
 
     private void OnTriggerStay(Collider other) 
     {
