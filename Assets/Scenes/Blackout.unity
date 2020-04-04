@@ -7472,6 +7472,9 @@ MonoBehaviour:
   roof: {fileID: 1775856187}
   elevatorDoor_L: {fileID: 0}
   elevatorDoor_R: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of fd47a48... optomized elevator script
+=======
 >>>>>>> parent of fd47a48... optomized elevator script
 --- !u!64 &164661911
 MeshCollider:
@@ -16970,7 +16973,11 @@ Transform:
   - {fileID: 1027163167}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 16
+=======
+  m_RootOrder: 15
+>>>>>>> parent of fd47a48... optomized elevator script
 =======
   m_RootOrder: 15
 >>>>>>> parent of fd47a48... optomized elevator script
@@ -25813,6 +25820,9 @@ MonoBehaviour:
   roof: {fileID: 1775856187}
   elevatorDoor_L: {fileID: 0}
   elevatorDoor_R: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of fd47a48... optomized elevator script
+=======
 >>>>>>> parent of fd47a48... optomized elevator script
 --- !u!1 &757940376
 GameObject:
@@ -26895,6 +26905,9 @@ MonoBehaviour:
   roof: {fileID: 1775856187}
   elevatorDoor_L: {fileID: 0}
   elevatorDoor_R: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of fd47a48... optomized elevator script
+=======
 >>>>>>> parent of fd47a48... optomized elevator script
 --- !u!43 &798451811
 Mesh:
@@ -28507,7 +28520,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 19
+=======
+  m_RootOrder: 18
+>>>>>>> parent of fd47a48... optomized elevator script
 =======
   m_RootOrder: 18
 >>>>>>> parent of fd47a48... optomized elevator script
@@ -29636,6 +29653,9 @@ MonoBehaviour:
   roof: {fileID: 1775856187}
   elevatorDoor_L: {fileID: 0}
   elevatorDoor_R: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of fd47a48... optomized elevator script
+=======
 >>>>>>> parent of fd47a48... optomized elevator script
 --- !u!43 &863868629
 Mesh:
@@ -43751,7 +43771,11 @@ Transform:
   - {fileID: 264849733}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 17
+=======
+  m_RootOrder: 16
+>>>>>>> parent of fd47a48... optomized elevator script
 =======
   m_RootOrder: 16
 >>>>>>> parent of fd47a48... optomized elevator script
@@ -47403,6 +47427,9 @@ MonoBehaviour:
   roof: {fileID: 1775856187}
   elevatorDoor_L: {fileID: 0}
   elevatorDoor_R: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of fd47a48... optomized elevator script
+=======
 >>>>>>> parent of fd47a48... optomized elevator script
 --- !u!1 &1371664129
 GameObject:
@@ -50118,6 +50145,9 @@ MonoBehaviour:
   roof: {fileID: 1775856187}
   elevatorDoor_L: {fileID: 0}
   elevatorDoor_R: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of fd47a48... optomized elevator script
+=======
 >>>>>>> parent of fd47a48... optomized elevator script
 --- !u!43 &1426709755
 Mesh:
@@ -57534,6 +57564,9 @@ MonoBehaviour:
   roof: {fileID: 1775856187}
   elevatorDoor_L: {fileID: 0}
   elevatorDoor_R: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of fd47a48... optomized elevator script
+=======
 >>>>>>> parent of fd47a48... optomized elevator script
 --- !u!43 &1623243062
 Mesh:
@@ -70399,7 +70432,11 @@ Transform:
   - {fileID: 617320202}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 15
+=======
+  m_RootOrder: 14
+>>>>>>> parent of fd47a48... optomized elevator script
 =======
   m_RootOrder: 14
 >>>>>>> parent of fd47a48... optomized elevator script
@@ -71517,7 +71554,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 18
+=======
+  m_RootOrder: 17
+>>>>>>> parent of fd47a48... optomized elevator script
 =======
   m_RootOrder: 17
 >>>>>>> parent of fd47a48... optomized elevator script
