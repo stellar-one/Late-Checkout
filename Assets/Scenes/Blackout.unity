@@ -7420,6 +7420,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elevatorDoor_L: {fileID: 2063666698}
   elevatorDoor_R: {fileID: 835736699}
+<<<<<<< HEAD
+=======
+=======
+  elevator: {fileID: 1125796014}
+  basement: {fileID: 1224234456}
+  mainFloor: {fileID: 911716823}
+  firstFloor: {fileID: 627976604}
+  roof: {fileID: 1775856187}
+  elevatorDoor_L: {fileID: 0}
+  elevatorDoor_R: {fileID: 0}
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
 --- !u!64 &164661911
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16916,7 +16928,15 @@ Transform:
   m_Children:
   - {fileID: 1027163167}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 16
+=======
+<<<<<<< HEAD
+  m_RootOrder: 16
+=======
+  m_RootOrder: 15
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
   m_LocalEulerAnglesHint: {x: 0, y: 0.57600003, z: 0}
 --- !u!43 &475201481
 Mesh:
@@ -25735,6 +25755,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750110587}
   m_Mesh: {fileID: 2050436989}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+--- !u!114 &750110593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750110587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d01124bbed1bf4bbf5eef005249086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elevator: {fileID: 1125796014}
+  basement: {fileID: 1224234456}
+  mainFloor: {fileID: 911716823}
+  firstFloor: {fileID: 627976604}
+  roof: {fileID: 1775856187}
+  elevatorDoor_L: {fileID: 0}
+  elevatorDoor_R: {fileID: 0}
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
 --- !u!1 &757940376
 GameObject:
   m_ObjectHideFlags: 0
@@ -26795,6 +26840,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794797077}
   m_Mesh: {fileID: 582807667}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+--- !u!114 &794797083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794797077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d01124bbed1bf4bbf5eef005249086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elevator: {fileID: 1125796014}
+  basement: {fileID: 1224234456}
+  mainFloor: {fileID: 911716823}
+  firstFloor: {fileID: 627976604}
+  roof: {fileID: 1775856187}
+  elevatorDoor_L: {fileID: 0}
+  elevatorDoor_R: {fileID: 0}
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
 --- !u!43 &798451811
 Mesh:
   m_ObjectHideFlags: 0
@@ -28405,7 +28475,15 @@ Transform:
   m_LocalScale: {x: 0.9787021, y: 3.0183783, z: 0.12983}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 19
+=======
+<<<<<<< HEAD
+  m_RootOrder: 19
+=======
+  m_RootOrder: 18
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &835736705
 Animator:
@@ -29510,6 +29588,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862518939}
   m_Mesh: {fileID: 166537135}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+--- !u!114 &862518945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862518939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d01124bbed1bf4bbf5eef005249086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elevator: {fileID: 1125796014}
+  basement: {fileID: 1224234456}
+  mainFloor: {fileID: 911716823}
+  firstFloor: {fileID: 627976604}
+  roof: {fileID: 1775856187}
+  elevatorDoor_L: {fileID: 0}
+  elevatorDoor_R: {fileID: 0}
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
 --- !u!43 &863868629
 Mesh:
   m_ObjectHideFlags: 0
@@ -43585,7 +43688,15 @@ Transform:
   - {fileID: 920499657}
   - {fileID: 264849733}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 17
+=======
+<<<<<<< HEAD
+  m_RootOrder: 17
+=======
+  m_RootOrder: 16
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1315521713
 Mesh:
@@ -47225,6 +47336,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elevatorDoor_L: {fileID: 2063666698}
   elevatorDoor_R: {fileID: 835736699}
+<<<<<<< HEAD
+=======
+=======
+  elevator: {fileID: 1125796014}
+  basement: {fileID: 1224234456}
+  mainFloor: {fileID: 911716823}
+  firstFloor: {fileID: 627976604}
+  roof: {fileID: 1775856187}
+  elevatorDoor_L: {fileID: 0}
+  elevatorDoor_R: {fileID: 0}
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
 --- !u!1 &1371664129
 GameObject:
   m_ObjectHideFlags: 0
@@ -49917,6 +50040,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419691097}
   m_Mesh: {fileID: 353786142}
+<<<<<<< HEAD
+=======
+=======
+  m_Mesh: {fileID: 1526106532}
+--- !u!114 &1419691103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419691097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d01124bbed1bf4bbf5eef005249086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elevator: {fileID: 1125796014}
+  basement: {fileID: 1224234456}
+  mainFloor: {fileID: 911716823}
+  firstFloor: {fileID: 627976604}
+  roof: {fileID: 1775856187}
+  elevatorDoor_L: {fileID: 0}
+  elevatorDoor_R: {fileID: 0}
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
 --- !u!43 &1426709755
 Mesh:
   m_ObjectHideFlags: 0
@@ -57323,6 +57471,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elevatorDoor_L: {fileID: 2063666698}
   elevatorDoor_R: {fileID: 835736699}
+<<<<<<< HEAD
+=======
+=======
+  elevator: {fileID: 1125796014}
+  basement: {fileID: 1224234456}
+  mainFloor: {fileID: 911716823}
+  firstFloor: {fileID: 627976604}
+  roof: {fileID: 1775856187}
+  elevatorDoor_L: {fileID: 0}
+  elevatorDoor_R: {fileID: 0}
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
 --- !u!43 &1623243062
 Mesh:
   m_ObjectHideFlags: 0
@@ -70186,7 +70346,15 @@ Transform:
   - {fileID: 413343327}
   - {fileID: 617320202}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 15
+=======
+<<<<<<< HEAD
+  m_RootOrder: 15
+=======
+  m_RootOrder: 14
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2047065758
 GameObject:
@@ -71300,7 +71468,15 @@ Transform:
   m_LocalScale: {x: 0.9787021, y: 3.0183783, z: 0.12983}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 18
+=======
+<<<<<<< HEAD
+  m_RootOrder: 18
+=======
+  m_RootOrder: 17
+>>>>>>> parent of fd47a48... optomized elevator script
+>>>>>>> parent of acaab20... idk
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2081231689
 Mesh:
