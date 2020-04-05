@@ -11,13 +11,6 @@ public class Elevator : MonoBehaviour
     public GameObject elevatorDoor_L;
     public GameObject elevatorDoor_R;
     public int button;
-    NavMeshAgent agent;
-    Transform target;
-
-    void Start()
-    {
-        target = mainFloor.transform;
-    }
 
     public void CallElevator(int floor) 
     {
@@ -53,12 +46,6 @@ public class Elevator : MonoBehaviour
             CloseElevatorDoors();
         }
     }
-
-    // private void OnTriggerStay(Collider other)
-    // {
-    //     Debug.Log("Select the floor you wish to go to...");
-    //     // elevator.transform.position += elevator.transform.up * Time.deltaTime;
-    // }
 
     void OpenElevatorDoors()
     {
