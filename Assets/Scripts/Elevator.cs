@@ -1,33 +1,64 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class Elevator : MonoBehaviour
 {
-    public GameObject elevator;
     public GameObject basement;
     public GameObject mainFloor;
     public GameObject firstFloor;
     public GameObject roof;
+    public GameObject elevator;
     public GameObject elevatorDoor_L;
     public GameObject elevatorDoor_R;
+    public int button;
+    NavMeshAgent agent;
+    Transform target;
 
-    public void CallElevator(bool t) 
+    void Start()
     {
-        if (t && !elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && !elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
+        target = mainFloor.transform;
+    }
+
+    public void CallElevator(int floor) 
+    {
+        switch (floor)
+        {
+            case 0:
+                Debug.Log("Basement");
+                break;
+            case 1:
+                // agent.SetDestination(target.position);
+                // roof.transform.position = basement.transform.position;
+                Debug.Log("Main Floor");
+                break;
+            case 2:
+                Debug.Log("1st Floor");
+                break;
+            case 3:
+                Debug.Log("Roof");
+                break;
+            default:
+                Debug.Log("Invalid Floor dumbass");
+                break;
+        }
+
+
+        if (!elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && !elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
         {
             OpenElevatorDoors();
         }
 
-        else if (t && elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
+        else if (elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
         {
             CloseElevatorDoors();
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("Select the floor you wish to go to...");
-        // elevator.transform.position += elevator.transform.up * Time.deltaTime;
-    }
+    // private void OnTriggerStay(Collider other)
+    // {
+    //     Debug.Log("Select the floor you wish to go to...");
+    //     // elevator.transform.position += elevator.transform.up * Time.deltaTime;
+    // }
 
     void OpenElevatorDoors()
     {

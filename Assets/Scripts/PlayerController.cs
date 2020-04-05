@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
             if (target.CompareTag("Elevator Buttons"))
             {
                 Debug.Log("Calling Elevator...");
-                target.GetComponent<Elevator>().CallElevator(true);                
+                target.GetComponent<Elevator>().CallElevator(target.GetComponent<Elevator>().button);                
             }
 
             if (target.CompareTag("Openable") && !target.GetComponent<Animator>().GetBool("Open"))
