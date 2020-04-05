@@ -21,22 +21,27 @@ public class Elevator : MonoBehaviour
         switch (floor)
         {
             case 0:
-                Debug.Log("Basement");
+                Debug.Log("Elevator coming to " + target);
+                target = basement.transform;
+                callElevator = true;
                 break;
             case 1:
-                Debug.Log("You are on the Main Floor");
-                target = mainFloor.transform;
                 Debug.Log("Elevator coming to " + target);
+                target = mainFloor.transform;
                 callElevator = true;
                 break;
             case 2:
-                Debug.Log("1st Floor");
+                Debug.Log("Elevator coming to " + target);
+                target = firstFloor.transform;
+                callElevator = true;
                 break;
             case 3:
-                Debug.Log("Roof");
+                Debug.Log("Elevator coming to " + target);
+                target = roof.transform;
+                callElevator = true;
                 break;
             default:
-                Debug.Log("Invalid Floor dumbass");
+                Debug.Log("Elevator Error");
                 break;
         }
 

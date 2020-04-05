@@ -7942,7 +7942,7 @@ MonoBehaviour:
   mainFloor: {fileID: 911716823}
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
-  elevator: {fileID: 0}
+  elevator: {fileID: 604825753}
   elevatorDoor_L: {fileID: 774872864}
   elevatorDoor_R: {fileID: 965946733}
   button: 3
@@ -46016,7 +46016,7 @@ MonoBehaviour:
   mainFloor: {fileID: 911716823}
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
-  elevator: {fileID: 0}
+  elevator: {fileID: 604825753}
   elevatorDoor_L: {fileID: 854977663}
   elevatorDoor_R: {fileID: 270151132}
   button: 2
@@ -55576,7 +55576,7 @@ MonoBehaviour:
   mainFloor: {fileID: 911716823}
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
-  elevator: {fileID: 0}
+  elevator: {fileID: 604825753}
   elevatorDoor_L: {fileID: 854977663}
   elevatorDoor_R: {fileID: 270151132}
   button: 2
