@@ -6,15 +6,15 @@ public class Elevator : MonoBehaviour
     public GameObject mainFloor;
     public GameObject firstFloor;
     public GameObject roof;
+
     public GameObject elevator;
     public GameObject elevatorDoor_L;
     public GameObject elevatorDoor_R;
+
     public int button;
 
-    void Start()
-    {
-        GameObject elevator = GameObject.FindWithTag("Elevator");
-    }
+    Transform target;
+    bool callElevator;
 
     public void CallElevator(int floor) 
     {
@@ -24,9 +24,10 @@ public class Elevator : MonoBehaviour
                 Debug.Log("Basement");
                 break;
             case 1:
-                elevator.GetComponent<MoveElevator>().SetTarget(mainFloor.transform);
-                elevator.GetComponent<MoveElevator>().BringElevator(true); 
-                Debug.Log("Main Floor");
+                Debug.Log("You are on the Main Floor");
+                target = mainFloor.transform;
+                Debug.Log("Elevator coming to " + target);
+                callElevator = true;
                 break;
             case 2:
                 Debug.Log("1st Floor");
@@ -61,5 +62,19 @@ public class Elevator : MonoBehaviour
     {
         elevatorDoor_L.GetComponent<Animator>().SetBool("Open", false);
         elevatorDoor_R.GetComponent<Animator>().SetBool("Open", false);
+    }
+
+    void Update()
+    {
+        if (callElevator)
+        {
+            if (elevator.transform.position.y >= target.transform.position.y)
+            {
+                Debug.Log("STOP?");
+                callElevator = false;
+                return;
+            }
+            elevator.transform.position += elevator.transform.up * Time.deltaTime;
+        }
     }
 }
