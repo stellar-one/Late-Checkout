@@ -24,8 +24,8 @@ public class Elevator : MonoBehaviour
                 Debug.Log("Basement");
                 break;
             case 1:
-                elevator.GetComponent<MoveElevator>().BringElevator(true);
                 elevator.GetComponent<MoveElevator>().SetTarget(mainFloor.transform);
+                elevator.GetComponent<MoveElevator>().BringElevator(true); 
                 Debug.Log("Main Floor");
                 break;
             case 2:
