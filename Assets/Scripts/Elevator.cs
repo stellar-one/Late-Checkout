@@ -15,46 +15,38 @@ public class Elevator : MonoBehaviour
 
     Transform target;
     bool callElevator;
+    float startTimer;
+    float endTimer = 10f;
+    bool doorOpened;
 
     public void CallElevator(int floor) 
     {
         switch (floor)
         {
             case 0:
-                Debug.Log("Elevator coming to " + target);
                 target = basement.transform;
+                Debug.Log("Elevator coming to " + target);
                 callElevator = true;
                 break;
             case 1:
-                Debug.Log("Elevator coming to " + target);
                 target = mainFloor.transform;
+                Debug.Log("Elevator coming to " + target);
                 callElevator = true;
                 break;
             case 2:
-                Debug.Log("Elevator coming to " + target);
                 target = firstFloor.transform;
+                Debug.Log("Elevator coming to " + target);
                 callElevator = true;
                 break;
             case 3:
-                Debug.Log("Elevator coming to " + target);
                 target = roof.transform;
+                Debug.Log("Elevator coming to " + target);
                 callElevator = true;
                 break;
             default:
                 Debug.Log("Elevator Error");
                 break;
-        }
-
-
-        if (!elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && !elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
-        {
-            OpenElevatorDoors();
-        }
-
-        else if (elevatorDoor_L.GetComponent<Animator>().GetBool("Open") && elevatorDoor_R.GetComponent<Animator>().GetBool("Open"))
-        {
-            CloseElevatorDoors();
-        }
+        }   
     }
 
     void OpenElevatorDoors()
@@ -71,15 +63,30 @@ public class Elevator : MonoBehaviour
 
     void Update()
     {
-        if (callElevator)
+        if (callElevator && !doorOpened)
         {
-            if (elevator.transform.position.y >= target.transform.position.y)
+            
+            if (elevator.transform.position.y >= target.transform.position.y) // arrived?
             {
                 Debug.Log("STOP?");
                 callElevator = false;
-                return;
+                OpenElevatorDoors();
+                doorOpened = true;
             }
             elevator.transform.position += elevator.transform.up * Time.deltaTime;
+            
         }
+        
+        else if (!callElevator && doorOpened)
+        {
+            startTimer += Time.deltaTime;
+            if (startTimer >= endTimer)
+            {
+                startTimer = 0;
+                CloseElevatorDoors();  
+                doorOpened = false;        
+            }
+        }
+            
     }
 }
