@@ -14,7 +14,7 @@ public class EnemyPatrol : MonoBehaviour
     NavMeshAgent myAgent;
 
 
-    [HideInInspector]
+    
     public Transform[] points;
     int destPoint = 0;
 
