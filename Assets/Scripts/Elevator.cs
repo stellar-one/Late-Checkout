@@ -24,9 +24,8 @@ public class Elevator : MonoBehaviour
                 Debug.Log("Basement");
                 break;
             case 1:
-                // need to pass the gameobject transform to the MoveElevator script so the navmesh agent has a new target
-                elevator.GetComponent<MoveElevator>().callElevator = true;
-                elevator.GetComponent<MoveElevator>().ChangeTarget(mainFloor.transform);
+                elevator.GetComponent<MoveElevator>().BringElevator(true);
+                elevator.GetComponent<MoveElevator>().SetTarget(mainFloor.transform);
                 Debug.Log("Main Floor");
                 break;
             case 2:
