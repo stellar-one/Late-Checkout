@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
 
 public class Elevator : MonoBehaviour
 {
@@ -12,6 +11,11 @@ public class Elevator : MonoBehaviour
     public GameObject elevatorDoor_R;
     public int button;
 
+    void Start()
+    {
+        GameObject elevator = GameObject.FindWithTag("Elevator");
+    }
+
     public void CallElevator(int floor) 
     {
         switch (floor)
@@ -20,8 +24,9 @@ public class Elevator : MonoBehaviour
                 Debug.Log("Basement");
                 break;
             case 1:
-                // agent.SetDestination(target.position);
-                // roof.transform.position = basement.transform.position;
+                // need to pass the gameobject transform to the MoveElevator script so the navmesh agent has a new target
+                elevator.GetComponent<MoveElevator>().callElevator = true;
+                elevator.GetComponent<MoveElevator>().ChangeTarget(mainFloor.transform);
                 Debug.Log("Main Floor");
                 break;
             case 2:
