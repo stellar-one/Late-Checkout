@@ -61,16 +61,16 @@ public class Elevator : MonoBehaviour
         elevatorDoor_R.GetComponent<Animator>().SetBool("Open", false);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (callElevator && !doorOpened)
         {
-            if (elevator.transform.position.y < target.transform.position.y) // check to go up
+            if (Mathf.Round(elevator.transform.position.y) < Mathf.Round(target.transform.position.y)) // check to go up
             {
                 Debug.Log("Going up...");
                 elevator.transform.position += elevator.transform.up * Time.deltaTime;
             }
-            else if (elevator.transform.position.y > target.transform.position.y) // check to go down
+            else if (Mathf.Round(elevator.transform.position.y) > Mathf.Round(target.transform.position.y)) // check to go down
             {
                 Debug.Log("Going down...");
                 elevator.transform.position += -elevator.transform.up * Time.deltaTime;
