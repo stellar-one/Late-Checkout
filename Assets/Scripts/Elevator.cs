@@ -61,7 +61,7 @@ public class Elevator : MonoBehaviour
         elevatorDoor_R.GetComponent<Animator>().SetBool("Open", false);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (callElevator && !doorOpened)
         {
