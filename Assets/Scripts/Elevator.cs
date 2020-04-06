@@ -65,49 +65,44 @@ public class Elevator : MonoBehaviour
     {
         if (callElevator && !doorOpened)
         {
-            if (elevator.transform.position.y < target.transform.position.y) // up
+            if (elevator.transform.position.y < target.transform.position.y) // check to go up
             {
                 Debug.Log("Going up...");
                 elevator.transform.position += elevator.transform.up * Time.deltaTime;
-
-                // if (elevator.transform.position.y == target.transform.position.y)
-                // {
-                //     Debug.Log("Arrived");
-                //     arrived();
-                // } -22 start --> -1
             }
-            if (elevator.transform.position.y < target.transform.position.y) // down
+            else if (elevator.transform.position.y > target.transform.position.y) // check to go down
             {
                 Debug.Log("Going down...");
                 elevator.transform.position += -elevator.transform.up * Time.deltaTime;
-
-                // if (elevator.transform.position.y == target.transform.position.y)
-                // {
-                //     Debug.Log("Arrived");
-                //     arrived();
-                // }
             }
-            // arrived(); 
-            
+            else
+            {
+                Arrived(); 
+            }
         }
         
         else if (!callElevator && doorOpened)
         {
-            startTimer += Time.deltaTime;
-            if (startTimer >= endTimer)
-            {
-                startTimer = 0;
-                CloseElevatorDoors();  
-                doorOpened = false;        
-            }
+            ElevatorDoorsTimerStart();
         }
             
     }
 
-    void arrived()
+    void Arrived()
     {  
         callElevator = false;
         OpenElevatorDoors();
         doorOpened = true;
+    }
+
+    void ElevatorDoorsTimerStart()
+    {
+        startTimer += Time.deltaTime;
+        if (startTimer >= endTimer)
+        {
+            startTimer = 0;
+            CloseElevatorDoors();
+            doorOpened = false;
+        }
     }
 }
