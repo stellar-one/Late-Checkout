@@ -16,28 +16,11 @@ public class Elevator : MonoBehaviour
     Transform target;
     bool callElevator;
     float startTimer;
-    float endTimer = 10f;
+    float endTimer = 7f;
     bool doorOpened;
-    int currentFloor = 0;
-    int direction;
+
     public void CallElevator(int floor) 
-    {
-        if (floor > currentFloor)
-        {
-            direction = 1;
-        }
-        else if (floor < currentFloor)
-        {
-            direction = -1;
-
-        }
-        currentFloor = floor;
-        
-        
-           
-                
-
-
+    {   
         switch (floor)
         {
             case 0:
@@ -82,39 +65,30 @@ public class Elevator : MonoBehaviour
     {
         if (callElevator && !doorOpened)
         {
+            if (elevator.transform.position.y < target.transform.position.y) // up
+            {
+                Debug.Log("Going up...");
+                elevator.transform.position += elevator.transform.up * Time.deltaTime;
 
-                if (direction == -1)
-                {
-                    if (elevator.transform.position.y <= target.transform.position.y)
-                    {
-                        Debug.Log("Arrivied");
-                        callElevator = false;
-                        OpenElevatorDoors();
-                        doorOpened = true;
+                // if (elevator.transform.position.y == target.transform.position.y)
+                // {
+                //     Debug.Log("Arrived");
+                //     arrived();
+                // } -22 start --> -1
+            }
+            if (elevator.transform.position.y < target.transform.position.y) // down
+            {
+                Debug.Log("Going down...");
+                elevator.transform.position += -elevator.transform.up * Time.deltaTime;
 
-                    }
-                    elevator.transform.position += -elevator.transform.up * Time.deltaTime;
-                }
-
-
-                else if (direction == 1)
-
-                {
-                    if (elevator.transform.position.y >= target.transform.position.y)
-                    {
-                        Debug.Log("Arrivied");
-                        callElevator = false;
-                        OpenElevatorDoors();
-                        doorOpened = true;
-
-                    }
-                    elevator.transform.position += elevator.transform.up * Time.deltaTime;
-                }
-                else
-
-                {
-                    Debug.Log("Do Nothing");
-                }
+                // if (elevator.transform.position.y == target.transform.position.y)
+                // {
+                //     Debug.Log("Arrived");
+                //     arrived();
+                // }
+            }
+            // arrived(); 
+            
         }
         
         else if (!callElevator && doorOpened)
@@ -128,5 +102,12 @@ public class Elevator : MonoBehaviour
             }
         }
             
+    }
+
+    void arrived()
+    {  
+        callElevator = false;
+        OpenElevatorDoors();
+        doorOpened = true;
     }
 }
