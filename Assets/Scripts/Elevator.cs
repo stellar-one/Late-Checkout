@@ -18,9 +18,26 @@ public class Elevator : MonoBehaviour
     float startTimer;
     float endTimer = 10f;
     bool doorOpened;
-
+    int currentFloor = 0;
+    int direction;
     public void CallElevator(int floor) 
     {
+        if (floor > currentFloor)
+        {
+            direction = 1;
+        }
+        else if (floor < currentFloor)
+        {
+            direction = -1;
+
+        }
+        currentFloor = floor;
+        
+        
+           
+                
+
+
         switch (floor)
         {
             case 0:
@@ -65,16 +82,39 @@ public class Elevator : MonoBehaviour
     {
         if (callElevator && !doorOpened)
         {
-            
-            if (elevator.transform.position.y >= target.transform.position.y) // arrived?
-            {
-                Debug.Log("STOP?");
-                callElevator = false;
-                OpenElevatorDoors();
-                doorOpened = true;
-            }
-            elevator.transform.position += elevator.transform.up * Time.deltaTime;
-            
+
+                if (direction == -1)
+                {
+                    if (elevator.transform.position.y <= target.transform.position.y)
+                    {
+                        Debug.Log("Arrivied");
+                        callElevator = false;
+                        OpenElevatorDoors();
+                        doorOpened = true;
+
+                    }
+                    elevator.transform.position += -elevator.transform.up * Time.deltaTime;
+                }
+
+
+                else if (direction == 1)
+
+                {
+                    if (elevator.transform.position.y >= target.transform.position.y)
+                    {
+                        Debug.Log("Arrivied");
+                        callElevator = false;
+                        OpenElevatorDoors();
+                        doorOpened = true;
+
+                    }
+                    elevator.transform.position += elevator.transform.up * Time.deltaTime;
+                }
+                else
+
+                {
+                    Debug.Log("Do Nothing");
+                }
         }
         
         else if (!callElevator && doorOpened)
