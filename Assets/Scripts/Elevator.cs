@@ -75,7 +75,7 @@ public class Elevator : MonoBehaviour
                 Debug.Log("Going down...");
                 elevator.transform.position += -elevator.transform.up * Time.deltaTime;
             }
-            else
+            else if(Mathf.Round(elevator.transform.position.y) == Mathf.Round(target.transform.position.y)) // check to see if at the target floor
             {
                 Arrived(); 
             }
