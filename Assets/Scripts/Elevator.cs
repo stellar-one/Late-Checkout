@@ -14,7 +14,7 @@ public class Elevator : MonoBehaviour
     public int button;
 
     Transform target;
-    bool callElevator;
+    bool bringElevator;
     float startTimer;
     float endTimer = 7f;
     bool doorOpened;
@@ -26,22 +26,22 @@ public class Elevator : MonoBehaviour
             case 0:
                 target = basement.transform;
                 Debug.Log("Elevator coming to " + target);
-                callElevator = true;
+                bringElevator = true;
                 break;
             case 1:
                 target = mainFloor.transform;
                 Debug.Log("Elevator coming to " + target);
-                callElevator = true;
+                bringElevator = true;
                 break;
             case 2:
                 target = firstFloor.transform;
                 Debug.Log("Elevator coming to " + target);
-                callElevator = true;
+                bringElevator = true;
                 break;
             case 3:
                 target = roof.transform;
                 Debug.Log("Elevator coming to " + target);
-                callElevator = true;
+                bringElevator = true;
                 break;
             default:
                 Debug.Log("Elevator Error");
@@ -55,7 +55,7 @@ public class Elevator : MonoBehaviour
         elevatorDoor_R.GetComponent<Animator>().SetBool("Open", true);
     }
 
-    void CloseElevatorDoors()
+    public void CloseElevatorDoors()
     {
         elevatorDoor_L.GetComponent<Animator>().SetBool("Open", false);
         elevatorDoor_R.GetComponent<Animator>().SetBool("Open", false);
@@ -63,7 +63,7 @@ public class Elevator : MonoBehaviour
 
     void Update()
     {
-        if (callElevator && !doorOpened)
+        if (bringElevator && !doorOpened)
         {
             if (Mathf.Round(elevator.transform.position.y) < Mathf.Round(target.transform.position.y)) // check to go up
             {
@@ -77,11 +77,11 @@ public class Elevator : MonoBehaviour
             }
             else if(Mathf.Round(elevator.transform.position.y) == Mathf.Round(target.transform.position.y)) // check to see if at the target floor
             {
-                Arrived(); 
+                Arrived();
             }
         }
         
-        else if (!callElevator && doorOpened)
+        else if (doorOpened)
         {
             ElevatorDoorsTimerStart();
         }
@@ -90,7 +90,8 @@ public class Elevator : MonoBehaviour
 
     void Arrived()
     {  
-        callElevator = false;
+        Debug.Log("Arrived");
+        bringElevator = false;
         OpenElevatorDoors();
         doorOpened = true;
     }

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float groundDistance = 0.4f;
     bool isGrounded;
     GameObject target;
+    GameObject elevator;
     
 
     void Update()
@@ -37,24 +38,48 @@ public class PlayerController : MonoBehaviour
         {
             if (target.CompareTag("Elevator Buttons"))
             {
-                Debug.Log("Calling Elevator...");
-                target.GetComponent<Elevator>().CallElevator(target.GetComponent<Elevator>().button);                
+                elevator = target;
+                target.GetComponent<Elevator>().CallElevator(target.GetComponent<Elevator>().button);
+            }
+            
+            if (target.name == "Basement")
+            {
+                Debug.Log("Going to Basement...");
+                elevator.GetComponent<Elevator>().CloseElevatorDoors();
+                elevator.GetComponent<Elevator>().CallElevator(0);
+            }
+            if (target.name == "Main Floor")
+            {
+                Debug.Log("Going to Main Floor...");
+                elevator.GetComponent<Elevator>().CloseElevatorDoors();
+                elevator.GetComponent<Elevator>().CallElevator(1);
+            }
+            if (target.name == "First Floor")
+            {
+                Debug.Log("Going to First Floor...");
+                elevator.GetComponent<Elevator>().CloseElevatorDoors();
+                elevator.GetComponent<Elevator>().CallElevator(2);
+            }
+            if (target.name == "Roof")
+            {
+                Debug.Log("Going to Roof...");
+                // elevator.GetComponent<Elevator>().CloseElevatorDoors();
+                
+                elevator.GetComponent<Elevator>().CallElevator(3);
             }
 
             if (target.CompareTag("Openable") && !target.GetComponent<Animator>().GetBool("Open"))
             {
-                target.GetComponent<Animator>().SetBool("Open", true);
+                Open();
             }
-
             else if (target.CompareTag("Openable") && target.GetComponent<Animator>().GetBool("Open"))
             {
-                target.GetComponent<Animator>().SetBool("Open", false);
+                Close();
             }
 
             if (target.CompareTag("Item"))
             {
-                Debug.Log("Picking up item...");
-                target.SetActive(false);
+                PickupItem(target);
             }
             
         }
@@ -113,6 +138,16 @@ public class PlayerController : MonoBehaviour
     {
         transform.localScale = new Vector3(1f, 1f, 1f);
         speed = 6f;
+    }
+
+    void Open()
+    {
+        target.GetComponent<Animator>().SetBool("Open", true);
+    }
+
+    void Close()
+    {
+        target.GetComponent<Animator>().SetBool("Open", false);
     }
 
     void PickupItem(GameObject item)
