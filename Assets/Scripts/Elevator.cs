@@ -79,8 +79,7 @@ public class Elevator : MonoBehaviour
             {
                 Arrived();
             }
-        }
-        
+        }  
         else if (doorOpened)
         {
             ElevatorDoorsTimerStart();

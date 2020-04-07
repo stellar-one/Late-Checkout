@@ -63,8 +63,7 @@ public class PlayerController : MonoBehaviour
             if (target.name == "Roof")
             {
                 Debug.Log("Going to Roof...");
-                // elevator.GetComponent<Elevator>().CloseElevatorDoors();
-                
+                elevator.GetComponent<Elevator>().CloseElevatorDoors();
                 elevator.GetComponent<Elevator>().CallElevator(3);
             }
 
