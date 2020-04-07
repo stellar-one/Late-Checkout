@@ -8,8 +8,8 @@ public class Elevator : MonoBehaviour
     public GameObject roof;
 
     public GameObject elevator;
-    public GameObject elevatorDoor_L;
-    public GameObject elevatorDoor_R;
+    GameObject elevatorDoor_L;
+    GameObject elevatorDoor_R;
 
     public int button;
 
@@ -26,21 +26,29 @@ public class Elevator : MonoBehaviour
             case 0:
                 target = basement.transform;
                 Debug.Log("Elevator coming to " + target);
+                elevatorDoor_L = GameObject.FindWithTag("Left Basement Elevator");
+                elevatorDoor_R = GameObject.FindWithTag("Right Basement Elevator");
                 bringElevator = true;
                 break;
             case 1:
                 target = mainFloor.transform;
                 Debug.Log("Elevator coming to " + target);
+                elevatorDoor_L = GameObject.FindWithTag("Left Lobby Elevator");
+                elevatorDoor_R = GameObject.FindWithTag("Right Lobby Elevator");
                 bringElevator = true;
                 break;
             case 2:
                 target = firstFloor.transform;
                 Debug.Log("Elevator coming to " + target);
+                elevatorDoor_L = GameObject.FindWithTag("Left First Floor Elevator");
+                elevatorDoor_R = GameObject.FindWithTag("Right First Floor Elevator");
                 bringElevator = true;
                 break;
             case 3:
                 target = roof.transform;
                 Debug.Log("Elevator coming to " + target);
+                elevatorDoor_L = GameObject.FindWithTag("Left Roof Elevator");
+                elevatorDoor_R = GameObject.FindWithTag("Right Roof Elevator");
                 bringElevator = true;
                 break;
             default:

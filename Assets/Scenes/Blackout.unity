@@ -452,7 +452,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-14012
+  m_Name: pb_Mesh25434
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4428,7 +4428,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15428
+  m_Name: pb_Mesh24324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4591,7 +4591,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16272
+  m_Name: pb_Mesh25180
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5057,12 +5057,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84488548}
   m_Mesh: {fileID: 575209511}
---- !u!1 &86469275 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 743436755508005156, guid: b6837a273fbd55147bb21b395daad237,
-    type: 3}
-  m_PrefabInstance: {fileID: 436966452}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &90382666
 Mesh:
   m_ObjectHideFlags: 0
@@ -8106,8 +8100,6 @@ MonoBehaviour:
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
   elevator: {fileID: 604825753}
-  elevatorDoor_L: {fileID: 774872864}
-  elevatorDoor_R: {fileID: 965946733}
   button: 3
 --- !u!64 &164661911
 MeshCollider:
@@ -9344,6 +9336,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340871701246610756, guid: 83ccd895037230147ab2f9e4776514f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Left Roof Elevator
       objectReference: {fileID: 0}
     - target: {fileID: 8340871701246610782, guid: 83ccd895037230147ab2f9e4776514f1,
         type: 3}
@@ -11661,12 +11658,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 743436755508005343, guid: b6837a273fbd55147bb21b395daad237,
     type: 3}
   m_PrefabInstance: {fileID: 1797020624}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &270151132 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 743436755508005156, guid: b6837a273fbd55147bb21b395daad237,
-    type: 3}
-  m_PrefabInstance: {fileID: 754812205}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &272378254
 Mesh:
@@ -15897,7 +15888,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15834
+  m_Name: pb_Mesh24730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16060,7 +16051,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14994
+  m_Name: pb_Mesh23874
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16238,6 +16229,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ER
+      objectReference: {fileID: 0}
+    - target: {fileID: 743436755508005156, guid: b6837a273fbd55147bb21b395daad237,
+        type: 3}
+      propertyPath: m_TagString
+      value: Right Lobby Elevator
       objectReference: {fileID: 0}
     - target: {fileID: 743436755508005343, guid: b6837a273fbd55147bb21b395daad237,
         type: 3}
@@ -19980,7 +19976,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7996
+  m_Name: pb_Mesh25308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20469,7 +20465,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16936
+  m_Name: pb_Mesh24270
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24661,7 +24657,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15490
+  m_Name: pb_Mesh24386
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25678,8 +25674,6 @@ MonoBehaviour:
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
   elevator: {fileID: 604825753}
-  elevatorDoor_L: {fileID: 1623413914}
-  elevatorDoor_R: {fileID: 86469275}
   button: 1
 --- !u!1001 &754812205
 PrefabInstance:
@@ -25702,6 +25696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ER
+      objectReference: {fileID: 0}
+    - target: {fileID: 743436755508005156, guid: b6837a273fbd55147bb21b395daad237,
+        type: 3}
+      propertyPath: m_TagString
+      value: Right First Floor Elevator
       objectReference: {fileID: 0}
     - target: {fileID: 743436755508005343, guid: b6837a273fbd55147bb21b395daad237,
         type: 3}
@@ -26075,7 +26074,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15774
+  m_Name: pb_Mesh24670
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26232,12 +26231,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &774872864 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8340871701246610756, guid: 83ccd895037230147ab2f9e4776514f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 227458762}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &776587967
 Mesh:
   m_ObjectHideFlags: 0
@@ -29020,12 +29013,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &854977663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8340871701246610756, guid: 83ccd895037230147ab2f9e4776514f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2104280288}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &862518939
 GameObject:
   m_ObjectHideFlags: 0
@@ -29469,8 +29456,6 @@ MonoBehaviour:
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
   elevator: {fileID: 604825753}
-  elevatorDoor_L: {fileID: 1623413914}
-  elevatorDoor_R: {fileID: 86469275}
   button: 1
 --- !u!43 &878254862
 Mesh:
@@ -33707,12 +33692,6 @@ MonoBehaviour:
   playerBody: {fileID: 2100854011}
   maxSensitivity: 100
   iteractableTxt: {fileID: 1946603113}
---- !u!1 &965946733 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 743436755508005156, guid: b6837a273fbd55147bb21b395daad237,
-    type: 3}
-  m_PrefabInstance: {fileID: 1241728519}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &977855801
 GameObject:
   m_ObjectHideFlags: 0
@@ -37023,7 +37002,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15640
+  m_Name: pb_Mesh24536
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38188,19 +38167,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1181142929 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 743436755508005156, guid: b6837a273fbd55147bb21b395daad237,
-    type: 3}
-  m_PrefabInstance: {fileID: 1797020624}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1195955917
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15568
+  m_Name: pb_Mesh24464
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40126,7 +40099,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14806
+  m_Name: pb_Mesh23686
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40939,6 +40912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ER
+      objectReference: {fileID: 0}
+    - target: {fileID: 743436755508005156, guid: b6837a273fbd55147bb21b395daad237,
+        type: 3}
+      propertyPath: m_TagString
+      value: Right Roof Elevator
       objectReference: {fileID: 0}
     - target: {fileID: 743436755508005343, guid: b6837a273fbd55147bb21b395daad237,
         type: 3}
@@ -44382,6 +44360,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EL
       objectReference: {fileID: 0}
+    - target: {fileID: 8340871701246610756, guid: 83ccd895037230147ab2f9e4776514f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Left Lobby Elevator
+      objectReference: {fileID: 0}
     - target: {fileID: 8340871701246610782, guid: 83ccd895037230147ab2f9e4776514f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46956,8 +46939,6 @@ MonoBehaviour:
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
   elevator: {fileID: 604825753}
-  elevatorDoor_L: {fileID: 854977663}
-  elevatorDoor_R: {fileID: 270151132}
   button: 2
 --- !u!1 &1371664129
 GameObject:
@@ -49704,8 +49685,6 @@ MonoBehaviour:
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
   elevator: {fileID: 604825753}
-  elevatorDoor_L: {fileID: 1854490369}
-  elevatorDoor_R: {fileID: 1181142929}
   button: 0
 --- !u!43 &1420857480
 Mesh:
@@ -53874,7 +53853,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16058
+  m_Name: pb_Mesh24954
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -56663,8 +56642,6 @@ MonoBehaviour:
   firstFloor: {fileID: 627976604}
   roof: {fileID: 1775856187}
   elevator: {fileID: 604825753}
-  elevatorDoor_L: {fileID: 854977663}
-  elevatorDoor_R: {fileID: 270151132}
   button: 2
 --- !u!43 &1623243062
 Mesh:
@@ -56829,12 +56806,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1623413914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8340871701246610756, guid: 83ccd895037230147ab2f9e4776514f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1345708809}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1632883333
 GameObject:
   m_ObjectHideFlags: 0
@@ -58796,7 +58767,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16476
+  m_Name: pb_Mesh25396
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -61521,6 +61492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ER
       objectReference: {fileID: 0}
+    - target: {fileID: 743436755508005156, guid: b6837a273fbd55147bb21b395daad237,
+        type: 3}
+      propertyPath: m_TagString
+      value: Right Basement Elevator
+      objectReference: {fileID: 0}
     - target: {fileID: 743436755508005343, guid: b6837a273fbd55147bb21b395daad237,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -61599,6 +61575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340871701246610756, guid: 83ccd895037230147ab2f9e4776514f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Left Basement Elevator
       objectReference: {fileID: 0}
     - target: {fileID: 8340871701246610782, guid: 83ccd895037230147ab2f9e4776514f1,
         type: 3}
@@ -64780,12 +64761,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1854490369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8340871701246610756, guid: 83ccd895037230147ab2f9e4776514f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1797096339}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1856829189
 GameObject:
   m_ObjectHideFlags: 0
@@ -65101,7 +65076,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11010
+  m_Name: pb_Mesh24988
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -72047,7 +72022,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6140
+  m_Name: pb_Mesh25592
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -74247,6 +74222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340871701246610756, guid: 83ccd895037230147ab2f9e4776514f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Left First Floor Elevator
       objectReference: {fileID: 0}
     - target: {fileID: 8340871701246610782, guid: 83ccd895037230147ab2f9e4776514f1,
         type: 3}

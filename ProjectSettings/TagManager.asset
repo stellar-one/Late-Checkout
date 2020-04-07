@@ -8,6 +8,14 @@ TagManager:
   - Openable
   - Item
   - Elevator
+  - Left Basement Elevator
+  - Right Basement Elevator
+  - Left Lobby Elevator
+  - Right Lobby Elevator
+  - Left First Floor Elevator
+  - Right First Floor Elevator
+  - Left Roof Elevator
+  - Right Roof Elevator
   layers:
   - Default
   - TransparentFX
