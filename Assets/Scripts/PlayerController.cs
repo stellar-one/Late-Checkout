@@ -44,25 +44,21 @@ public class PlayerController : MonoBehaviour
             
             if (target.name == "Basement")
             {
-                Debug.Log("Going to Basement...");
                 elevator.GetComponent<Elevator>().CloseElevatorDoors();
                 elevator.GetComponent<Elevator>().CallElevator(0);
             }
             if (target.name == "Main Floor")
             {
-                Debug.Log("Going to Main Floor...");
                 elevator.GetComponent<Elevator>().CloseElevatorDoors();
                 elevator.GetComponent<Elevator>().CallElevator(1);
             }
             if (target.name == "First Floor")
             {
-                Debug.Log("Going to First Floor...");
                 elevator.GetComponent<Elevator>().CloseElevatorDoors();
                 elevator.GetComponent<Elevator>().CallElevator(2);
             }
             if (target.name == "Roof")
             {
-                Debug.Log("Going to Roof...");
                 elevator.GetComponent<Elevator>().CloseElevatorDoors();
                 elevator.GetComponent<Elevator>().CallElevator(3);
             }
