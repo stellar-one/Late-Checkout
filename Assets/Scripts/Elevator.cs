@@ -25,28 +25,24 @@ public class Elevator : MonoBehaviour
         {
             case 0:
                 target = basement.transform;
-                Debug.Log("Elevator coming to " + target);
                 elevatorDoor_L = GameObject.FindWithTag("Left Basement Elevator");
                 elevatorDoor_R = GameObject.FindWithTag("Right Basement Elevator");
                 bringElevator = true;
                 break;
             case 1:
                 target = mainFloor.transform;
-                Debug.Log("Elevator coming to " + target);
                 elevatorDoor_L = GameObject.FindWithTag("Left Lobby Elevator");
                 elevatorDoor_R = GameObject.FindWithTag("Right Lobby Elevator");
                 bringElevator = true;
                 break;
             case 2:
                 target = firstFloor.transform;
-                Debug.Log("Elevator coming to " + target);
                 elevatorDoor_L = GameObject.FindWithTag("Left First Floor Elevator");
                 elevatorDoor_R = GameObject.FindWithTag("Right First Floor Elevator");
                 bringElevator = true;
                 break;
             case 3:
                 target = roof.transform;
-                Debug.Log("Elevator coming to " + target);
                 elevatorDoor_L = GameObject.FindWithTag("Left Roof Elevator");
                 elevatorDoor_R = GameObject.FindWithTag("Right Roof Elevator");
                 bringElevator = true;
@@ -75,12 +71,10 @@ public class Elevator : MonoBehaviour
         {
             if (Mathf.Round(elevator.transform.position.y) < Mathf.Round(target.transform.position.y)) // check to go up
             {
-                Debug.Log("Going up...");
                 elevator.transform.position += elevator.transform.up * Time.deltaTime;
             }
             else if (Mathf.Round(elevator.transform.position.y) > Mathf.Round(target.transform.position.y)) // check to go down
             {
-                Debug.Log("Going down...");
                 elevator.transform.position += -elevator.transform.up * Time.deltaTime;
             }
             else if(Mathf.Round(elevator.transform.position.y) == Mathf.Round(target.transform.position.y)) // check to see if at the target floor
@@ -91,13 +85,11 @@ public class Elevator : MonoBehaviour
         else if (doorOpened)
         {
             ElevatorDoorsTimerStart();
-        }
-            
+        }    
     }
 
     void Arrived()
-    {  
-        Debug.Log("Arrived");
+    {
         bringElevator = false;
         OpenElevatorDoors();
         doorOpened = true;
