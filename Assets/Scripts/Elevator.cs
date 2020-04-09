@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class Elevator : MonoBehaviour
 {
+    public TextMeshProUGUI currentFloor;
     public GameObject basement;
     public GameObject mainFloor;
     public GameObject firstFloor;
@@ -16,7 +18,7 @@ public class Elevator : MonoBehaviour
     Transform target;
     bool bringElevator;
     float startTimer;
-    float endTimer = 7f;
+    float endTimer = 5f;
     bool doorOpened;
 
     public void CallElevator(int floor) 
@@ -90,6 +92,7 @@ public class Elevator : MonoBehaviour
 
     void Arrived()
     {
+        currentFloor.text = target.name;
         bringElevator = false;
         OpenElevatorDoors();
         doorOpened = true;
@@ -103,6 +106,7 @@ public class Elevator : MonoBehaviour
             startTimer = 0;
             CloseElevatorDoors();
             doorOpened = false;
+            currentFloor.text = "";
         }
     }
 }
