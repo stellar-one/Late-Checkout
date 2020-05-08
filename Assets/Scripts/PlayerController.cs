@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
             if (target.CompareTag("Item"))
             {
+                // If able to, then pickup item
                 PickupItem(target);
             }
             
