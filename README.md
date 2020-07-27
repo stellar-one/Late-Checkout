@@ -1,16 +1,16 @@
 # Late-Checkout
 
 ## Index
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#intro
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#character-bios
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#rough-plot
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#gameplay-description
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#artistic-style-outline
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#systematic-breakdown-of-components
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#asset-breakdown
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#game-flow-diagram
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#project-timeline
-- https://github.com/arthurosipyan/Late-Checkout/new/master?readme=1#additional-ideas-and-possibilities
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#intro
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#character-bios
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#rough-plot
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#gameplay-description
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#artistic-style-outline
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#systematic-breakdown-of-components
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#asset-breakdown
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#game-flow-diagram
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#project-timeline
+- https://github.com/arthurosipyan/Late-Checkout/tree/master#additional-ideas-and-possibilities
 
 ## Intro
 
