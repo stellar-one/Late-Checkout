@@ -16,11 +16,11 @@
 This is it, you've earned this. Just you, your best buds, and some good times at the Longlight Lodge. After the late drive in, you're ready to call it a night and start this vacation first thing in the morning. But what's this, where has everyone gone? Surely they're just out back...
 
 ## Character Bios
-**Alex Jones** is one of the top corprate lawyers in the state and has been stressed out for far too long. He's long overdue for a nice vacation away from the city, where he can enjoy some peace and quiet.
+**Nathan Jones** is one of the top corprate lawyers in the state and has been stressed out for far too long. He's long overdue for a nice vacation away from the city, where he can enjoy some peace and quiet.
 
-**John Freely** is Arthur's best friend since the third grade. They've been through a lot, but since they've parted ways out of highschool, their friendship has been fading. John's looking to catchup with Arthur with this vacation idea of his.
+**John Freely** is Nathan's best friend since the third grade. They've been through a lot, but since they've parted ways out of highschool, their friendship has been fading. John's looking to catchup with Nathan with this vacation idea of his.
 
-**Jessica Freely** is John's sister who's always looked out for John, especially now as he's a recovering alcoholic. She's an EMT who, like Arthur, could use a vacation to unwind.
+**Jessica Freely** is John's sister who's always looked out for John, especially now as he's a recovering alcoholic. She's an EMT who, like Nathan, could use a vacation to unwind.
 
 ****
 
