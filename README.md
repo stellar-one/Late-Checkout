@@ -22,9 +22,10 @@ You just finished up your business trip and you've found out your flight has bee
 The game starts off with a cutscene of Jacob Fisher at the airport as he gets notified that his flight has been delayed due to the severe snow storm. Jacob is seen calling his wife and letting her know of the unfortunate news. From there, Jacob transitions from the airport scene to the lobby of the motel, where we see the guy at the front desk hand over the keys to his room. As the cut scene ends, the player takes the key being handed to him and starts to proceed to this room. Along the way, he notices a sinister undertone that the motel is giving off, specifically with the noises being heard from the rooms. Arriving at his room, the player enters and begins to settle in, only he doesn't realize what's in store for the night...
 
 ## Gameplay Description
-
+This is an exploration game in a horror setting. The gameplay is centered around the player investigating the motel he's staying at, hoping to find the necessary items to survive the night.
 
 ## Artistic Style Outline
+
 
 ## Systematic Breakdown of Components
 
