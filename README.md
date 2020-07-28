@@ -40,7 +40,7 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 - **Effects** consist of flickering lights, random sinister noises, objects falling, and doors creeking open. Animations will play a major role in setting up the supernatural occurances.
 
 ### Text Assets:
-- There is no tutorial, again leaving the player feeling lost from the very start of the game. The noises and level design will act as a hidden path for where the player should be heading. An example would be the start of the game, where Jacob is in his room and there is only one way in and out: the door. The narration will come from Jacob in the form of random inputs and observations. Text UI is implemented to show what the item the player is looking at, as well as if it can be interacted with.
+- There is no tutorial, again leaving the player feeling lost from the very start of the game. The noises and level design will act as a hidden path for where the player should be heading. An example would be the start of the game, where Jacob is in his room and there is only one way in and out: the door. The narration will come from Jacob in the form of random inputs and observations. Text UI is implemented to show what item the player is looking at, as well as if it can be interacted with.
 
 ### Sound Assets:
 - **In-game Sound** will include the sound of objects falling, creeking floor boards, and sinister ambience for the the background audio.
