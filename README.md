@@ -25,7 +25,14 @@ The game starts off with a cutscene of Jacob Fisher at the airport as he gets no
 This is an exploration game in a horror setting. The gameplay is centered around the player investigating the motel he's staying at, hoping to find the necessary items to survive the night.
 
 ## Artistic Style Outline
-UI will be very minimal and simple, nothing fancy. Sound will be a lot like other horror games and movies. The level will look like the typical vacant motel that gives off major creepy vibes.
+UI will be very minimal and simple, nothing fancy. Sound will be a lot like other horror games and movies. The level will look like the typical vacant motel that gives off major creepy vibes. The following are some examples for what the game should aim to look like...
+
+![Cover Art](https://cdn.discordapp.com/attachments/737396307853049916/737689201683857458/image0.jpg)
+![Sleep Paralysis Demon](https://cdn.discordapp.com/attachments/737396307853049916/737687850853859398/image0.jpg)
+![Motel Hallway](https://cdn.discordapp.com/attachments/737396307853049916/737688662942285944/image0.jpg)
+![Motel Snowed In](https://cdn.discordapp.com/attachments/737396307853049916/737690230819389480/image0.jpg)
+![Motel Snowed In 2](https://cdn.discordapp.com/attachments/737396307853049916/737690029702512731/image0.jpg)
+![Motel Room](https://cdn.discordapp.com/attachments/737396307853049916/737689889595850885/image0.jpg)
 
 ## Systematic Breakdown of Components
 3D Renderer, Save/Load System, State Machine, UI System, Sound Effects, and AI.
