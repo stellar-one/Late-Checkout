@@ -66,10 +66,21 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 - Menu -> Quit -> End
 
 ## Project Timeline
+### Prototype
 - Milestone 1: Mechanics (9/30/20)
-- Milestone 2: Level Design & Assets (11/30/20)
-- Milestone 3: Features (1/31/21)
-- Milestone 4: Beta (3/31/21)
+- Milestone 2: Game Logic & Features (10/31/20)
+
+### First Playable
+- Milestone 3: Level Design & Assets (1/31/21)
+
+### Vertical Slice
+- Milestone 4: Alpha (6/30/21)
+
+### Final Build
+- Milestone 5: Beta (9/30/21)
+
+### Release
+- Milestone 6: Marketing (10/31/21)
 
 ## Additional Ideas and Possibilities
 
