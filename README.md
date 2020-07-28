@@ -51,7 +51,7 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 
 ### Sound Assets:
 - **In-game Sound** will include the sound of objects falling, creeking floor boards, and sinister ambience for the the background audio.
-- **UI/HUD Feedback Sound** will be the sound of a old, flickering flouresant light. When the user confirms an option, there will be a sound of a broken light bulb.
+- **UI/HUD Feedback Sound** will be the sound of a old, flickering florescent light. When the user confirms an option, there will be a sound of a broken light bulb.
 - **Music** will only be heard from old radios/record players.
 - **Voice** will consist of faint chatter and conversations from afar, as well as Jacob's own narrating voice.
 
