@@ -25,9 +25,10 @@ The game starts off with a cutscene of Jacob Fisher at the airport as he gets no
 This is an exploration game in a horror setting. The gameplay is centered around the player investigating the motel he's staying at, hoping to find the necessary items to survive the night.
 
 ## Artistic Style Outline
-
+UI will be very minimal and simple, nothing fancy. Sound will be a lot like other horror games and movies. The level will be your classic old school motel. The maintenance of the establishment is obviously lacking, as shown by the deteriorating wallpaper and flickering lights, for example. The classic horror movie set at a motel is essentially what we're going for here. The setting is a major component in selling the game's impersion. It will leave the player constantly feeling on-edge and unsafe throughout the game. 
 
 ## Systematic Breakdown of Components
+
 
 ## Asset Breakdown
 
