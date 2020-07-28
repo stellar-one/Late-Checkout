@@ -62,7 +62,7 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 - Milestone 1: Mechanics (9/30/20)
 - Milestone 2: Level Design & Assets (11/30/20)
 - Milestone 3: Features (1/31/21)
-- Milestone 4: Beta (3/31/20)
+- Milestone 4: Beta (3/31/21)
 
 ## Additional Ideas and Possibilities
 
