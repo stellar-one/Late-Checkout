@@ -28,9 +28,10 @@ This is an exploration game in a horror setting. The gameplay is centered around
 UI will be very minimal and simple, nothing fancy. Sound will be a lot like other horror games and movies. The level will be your classic old school motel. The maintenance of the establishment is obviously lacking, as shown by the deteriorating wallpaper and flickering lights, for example. The classic horror movie set at a motel is essentially what we're going for here. The setting is a major component in selling the game's impersion. It will leave the player constantly feeling on-edge and unsafe throughout the game. 
 
 ## Systematic Breakdown of Components
-
+3D Renderer, Save/Load System, State Machine, UI System, Sound Effects, and AI.
 
 ## Asset Breakdown
+
 
 ## Game Flow Diagram
 
