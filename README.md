@@ -49,8 +49,20 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 - **Voice** will consist of faint chatter and conversations from afar, as well as Jacob's own narrating voice.
 
 ## Game Flow Diagram
+### General Game Flow:
+- Start -> Menu -> Play -> New Game -> Cutscene -> Level -> Cutscene -> Credits -> End
+- Start -> Menu -> Play -> Continue -> Load Last Save State -> Credits -> End
 
+### Menu Game Flow
+- Menu -> Play -> New Game/Continue -> ...
+- Menu -> Settings -> Save & Return
+- Menu -> Quit -> End
 
 ## Project Timeline
+- Milestone 1: Mechanics (9/30/20)
+- Milestone 2: Level Design & Assets (11/30/20)
+- Milestone 3: Features (1/31/21)
+- Milestone 4: Beta (3/31/20)
 
 ## Additional Ideas and Possibilities
+
