@@ -13,20 +13,16 @@
 - [Additonal Ideas and Possibilities](https://github.com/arthurosipyan/Late-Checkout/tree/master#additional-ideas-and-possibilities)
 
 ## Intro
-This is it, you've earned this. Just you, your best buds, and some good times at the Longlight Lodge. After the late drive in, you're ready to call it a night and start this vacation first thing in the morning. But what's this, where has everyone gone? Surely they're just out back...
+You just finished up your business trip and you've found out your flight has been cancelled due to the blizzard, so you're crashing at the motel just a couple miles away. It's not ideal, but it'll have to. Motels are only creepy in horror movies, right?
 
 ## Character Bios
-**Nathan Jones** is one of the top corprate lawyers in the state and has been stressed out for far too long. He's long overdue for a nice vacation away from the city, where he can enjoy some peace and quiet.
-
-**John Freely** is Nathan's best friend since the third grade. They've been through a lot, but since they've parted ways out of highschool, their friendship has been fading. John's looking to catchup with Nathan with this vacation idea of his.
-
-**Jessica Freely** is John's sister who's always looked out for John, especially now as he's a recovering alcoholic. She's an EMT who, like Nathan, could use a vacation to unwind.
-
-****
+**Jacob Fisher** is a 43-year-old corporate lawyer who's a father of 2. He's eager to get back to his family, after this exhausting business trip. Jacob was hoping to not be assigned to this trip, but got assigned anyway.
 
 ## Rough Plot
+The game starts off with a cutscene of Jacob Fisher at the airport as he gets notified that his flight has been delayed due to the severe snow storm. Jacob is seen calling his wife and letting her know of the unfortunate news. From there, Jacob transitions from the airport scene to the lobby of the motel, where we see the guy at the front desk hand over the keys to his room. As the cut scene ends, the player takes the key being handed to him and starts to proceed to this room. Along the way, he notices a sinister undertone that the motel is giving off, specifically with the noises being heard from the rooms. Arriving at his room, the player enters and begins to settle in, only he doesn't realize what's in store for the night...
 
 ## Gameplay Description
+
 
 ## Artistic Style Outline
 
