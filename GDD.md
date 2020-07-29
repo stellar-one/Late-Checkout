@@ -83,4 +83,4 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 - Milestone 6: Marketing (10/31/21)
 
 ## Additional Ideas and Possibilities
-
+- Player can strategically distract the enemy
