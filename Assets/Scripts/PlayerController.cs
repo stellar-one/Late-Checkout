@@ -80,6 +80,16 @@ public class PlayerController : MonoBehaviour
                     inventory.AddItem(item);
                 }
             }
+
+            if (target.CompareTag("Hide"))
+            {
+                Debug.Log("Hiding");
+            }
+
+            if (target.CompareTag("Examine"))
+            {
+                Debug.Log("Examining " + target.name);
+            }
             
         }
 

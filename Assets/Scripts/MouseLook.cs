@@ -43,8 +43,24 @@ public class MouseLook : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 4f, layerMaskInteract.value))
         {
             RaycastedObj = hit.collider.gameObject;
-            iteractableTxt.text = raycastedObj.name;
             CrosshairActive();
+
+            if(RaycastedObj.tag == "Hide")
+            {
+                iteractableTxt.text = "Hide";
+            }
+            else if(RaycastedObj.tag == "Item")
+            {
+                iteractableTxt.text = "Pickup " + raycastedObj.name;
+            }
+            else if(RaycastedObj.tag == "Examine")
+            {
+                iteractableTxt.text = "Examine " + raycastedObj.name;
+            }
+            else
+            {
+                iteractableTxt.text = raycastedObj.name;
+            }
         }
         else
         {

@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-public interface IInventoryItem{
-    
+public interface IInventoryItem
+{
     string Name { get; }
 
     Sprite Image { get; }

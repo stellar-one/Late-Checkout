@@ -16,6 +16,8 @@ TagManager:
   - Right First Floor Elevator
   - Left Roof Elevator
   - Right Roof Elevator
+  - Examine
+  - Hide
   layers:
   - Default
   - TransparentFX
