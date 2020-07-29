@@ -67,17 +67,17 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 
 ## Project Timeline
 ### Prototype
-- Milestone 1: Mechanics (9/30/20)
-- Milestone 2: Game Logic & Features (10/31/20)
+- Milestone 1: Mechanics (8/31/20)
+- Milestone 2: Game Logic & Features (9/30/20)
 
 ### First Playable
-- Milestone 3: Level Design & Assets (1/31/21)
+- Milestone 3: Level Design & Assets (11/30/21)
 
 ### Vertical Slice
-- Milestone 4: Alpha (6/30/21)
+- Milestone 4: Alpha (2/28/21)
 
 ### Final Build
-- Milestone 5: Beta (9/30/21)
+- Milestone 5: Beta (5/31/21)
 
 ### Release
 - Milestone 6: Marketing (10/31/21)
