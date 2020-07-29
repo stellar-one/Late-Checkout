@@ -1,26 +1,26 @@
 ﻿using UnityEngine;
-using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterController controller;
-    public LayerMask groundMask;
-    public Transform groundCheck;
+    private Animator _animator;
+    private CharacterController _characterController;
     Vector3 velocity;
-    public float speed = 6f;
-    public float jumpHeight = 2f;
+    public float speed = 6.0f;
+    public float jumpHeight = 2.0f;
     public float gravity = -9.81f;
-    public float groundDistance = 0.4f;
-    bool isGrounded;
     GameObject target;
     GameObject elevator;
-    
+    public Inventory inventory;
+
+    void Start()
+    {
+        _animator = GetComponent<Animator>();
+        _characterController = GetComponent<CharacterController>();
+    }
 
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if(isGrounded && velocity.y < 0)
+        if(_characterController.isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        _characterController.Move(move * speed * Time.deltaTime);
 
         target = Camera.main.GetComponent<MouseLook>().RaycastedObj;
 
@@ -74,66 +74,43 @@ public class PlayerController : MonoBehaviour
 
             if (target.CompareTag("Item"))
             {
-                // If able to, then pickup item
-                PickupItem(target);
+                IInventoryItem item = target.GetComponent<IInventoryItem>();
+                if(item != null)
+                {
+                    inventory.AddItem(item);
+                }
             }
             
         }
 
-
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetButtonDown("Jump") && _characterController.isGrounded)
         {
-            Jump();
+            velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && _characterController.isGrounded)
         {
-            Sprint();
+            speed = 8f;
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift) && isGrounded)
+        else if (Input.GetKeyUp(KeyCode.LeftShift) && _characterController.isGrounded)
         {
-            Walk();
+            speed = 6f;
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftControl) && isGrounded)
+        if(Input.GetKeyDown(KeyCode.LeftControl) && _characterController.isGrounded)
         {
-            Crouch();
+            transform.localScale = new Vector3(1f, .5f, 1f);
+            speed = 4f;
         }
-        else if(Input.GetKeyUp(KeyCode.LeftControl) && isGrounded)
+        else if(Input.GetKeyUp(KeyCode.LeftControl) && _characterController.isGrounded)
         {
-            Stand();
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            speed = 6f;
         }
 
         velocity.y += gravity * Time.deltaTime;
 
-        controller.Move(velocity * Time.deltaTime);
-    }
-
-    void Jump()
-    {
-        velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
-    }
-
-    void Sprint()
-    {
-        speed = 8f;
-    }
-
-    void Walk()
-    {
-        speed = 6f;
-    }
-
-    void Crouch()
-    {
-        transform.localScale = new Vector3(1f, .5f, 1f);
-        speed = 4f;
-    }
-
-    void Stand()
-    {
-        transform.localScale = new Vector3(1f, 1f, 1f);
-        speed = 6f;
+        _characterController.Move(velocity * Time.deltaTime);
     }
 
     void Open()
@@ -144,16 +121,5 @@ public class PlayerController : MonoBehaviour
     void Close()
     {
         target.GetComponent<Animator>().SetBool("Open", false);
-    }
-
-    void PickupItem(GameObject item)
-    {
-        Debug.Log("Adding " + item.name + "...");
-        // add item based on priority list:
-        // 1: Hand, if empty
-        // 2: Hotbox, if empty
-        // 3: Inventory, if empty
-        // 4: alert "Inventory full"
-        item.SetActive(false);
     }
 }
