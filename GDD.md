@@ -71,7 +71,7 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 - Milestone 2: Game Logic & Features (9/30/20)
 
 ### First Playable
-- Milestone 3: Level Design & Assets (11/30/21)
+- Milestone 3: Level Design & Assets (11/30/20)
 
 ### Vertical Slice
 - Milestone 4: Alpha (2/28/21)
