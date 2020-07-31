@@ -57,34 +57,34 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 
 ## Game Flow Diagram
 ### General Game Flow:
-- Start -> Menu -> Play -> New Game -> Cutscene -> Level -> Cutscene -> Credits -> End
-- Start -> Menu -> Play -> Continue -> Load Last Save State -> Credits -> End
+`Start -> Menu -> Play -> New Game -> Cutscene -> Level -> Cutscene -> Credits -> End`
+`Start -> Menu -> Play -> Continue -> Load Last Save State -> Credits -> End`
 
 ### Menu Game Flow
-- Menu -> Play -> New Game/Continue -> ...
-- Menu -> Settings -> Save & Return
-- Menu -> Quit -> End
+`Menu -> Play -> New Game/Continue -> ...`
+`Menu -> Settings -> Save & Return`
+`Menu -> Quit -> End`
 
 ## Project Timeline
-### Prototype (Exp. Completion: September 30th, 2020)
-The prototype will aim to have the blackout level, core mechanics, features, and game logic to be fully functional.
+### Prototype
+<em>The prototype will aim to have the blackout level, core mechanics, features, and game logic to be fully functional.</em>
 - Milestone 1: Mechanics (8/31/20)
 - Milestone 2: Game Logic & Features (9/30/20)
 
-### First Playable (Exp. Completion: November 30th, 2020)
-The first playable will build off of the prototype, only this time it will have a good amount of essential assets and level design done.
+### First Playable
+<em>The first playable will build off of the prototype, only this time it will have a good amount of essential assets and level design done.</em>
 - Milestone 3: Level Design & Assets (11/30/20)
 
-### Vertical Slice (Exp. Completion: February 28th, 2021)
-The vertical slice will involve a lot of work towards to the first official trailor of the game.
+### Vertical Slice
+<em>The vertical slice will involve a lot of work towards to the first official trailor of the game.</em>
 - Milestone 4: Alpha (2/28/21)
 
-### Final Build (Exp. Completion: May 31st, 2021)
-The beta will be released and have a limited capacity of players to offically start play testing it.
+### Final Build
+<em>The beta will be released and have a limited capacity of players to offically start play testing it.</em>
 - Milestone 5: Beta (5/31/21)
 
-### Release (Exp. Completion: October 31st, 2021)
-The game will be ready for its official release, where all that remains is the marketing behind the game.
+### Release
+<em>The game will be ready for its official release, where all that remains is the marketing behind the game.</em>
 - Milestone 6: Marketing (10/31/21)
 
 ## Additional Ideas and Possibilities
