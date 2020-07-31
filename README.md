@@ -57,35 +57,35 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 
 ## Game Flow Diagram
 ### General Game Flow:
-`Start -> Menu -> Play -> New Game -> Cutscene -> Level -> Cutscene -> Credits -> End`
+`Start -> Menu -> Play -> New Game -> Cutscene -> Level -> Cutscene -> Credits -> End`\
 `Start -> Menu -> Play -> Continue -> Load Last Save State -> Credits -> End`
 
 ### Menu Game Flow
-`Menu -> Play -> New Game/Continue -> ...`
-`Menu -> Settings -> Save & Return`
+`Menu -> Play -> New Game/Continue -> ...`\
+`Menu -> Settings -> Save & Return`\
 `Menu -> Quit -> End`
 
 ## Project Timeline
 ### Prototype
 <em>The prototype will aim to have the blackout level, core mechanics, features, and game logic to be fully functional.</em>
-- Milestone 1: Mechanics (8/31/20)
-- Milestone 2: Game Logic & Features (9/30/20)
+- **Milestone 1: Mechanics (8/31/20)**
+- **Milestone 2: Game Logic & Features (9/30/20)**
 
 ### First Playable
 <em>The first playable will build off of the prototype, only this time it will have a good amount of essential assets and level design done.</em>
-- Milestone 3: Level Design & Assets (11/30/20)
+- **Milestone 3: Level Design & Assets (11/30/20)**
 
 ### Vertical Slice
 <em>The vertical slice will involve a lot of work towards to the first official trailor of the game.</em>
-- Milestone 4: Alpha (2/28/21)
+- **Milestone 4: Alpha (2/28/21)**
 
 ### Final Build
 <em>The beta will be released and have a limited capacity of players to offically start play testing it.</em>
-- Milestone 5: Beta (5/31/21)
+- **Milestone 5: Beta (5/31/21)**
 
 ### Release
 <em>The game will be ready for its official release, where all that remains is the marketing behind the game.</em>
-- Milestone 6: Marketing (10/31/21)
+- **Milestone 6: Marketing (10/31/21)**
 
 ## Additional Ideas and Possibilities
 - Player can strategically distract the enemy
