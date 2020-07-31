@@ -58,10 +58,7 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 ## Game Flow Diagram
 ### General Game Flow:
 `Start -> Menu -> Play -> New Game -> Cutscene -> Level -> Cutscene -> Credits -> End`\
-`Start -> Menu -> Play -> Continue -> Load Last Save State -> Credits -> End`
-
-### Menu Game Flow
-`Menu -> Play -> New Game/Continue -> ...`\
+`Start -> Menu -> Play -> Continue -> Load Last Save State -> Credits -> End`\
 `Menu -> Settings -> Save & Return`\
 `Menu -> Quit -> End`
 
