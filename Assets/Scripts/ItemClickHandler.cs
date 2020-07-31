@@ -37,25 +37,25 @@ public class ItemClickHandler : MonoBehaviour
         graphic.CrossFadeColor(color, _button.colors.fadeDuration, true, true);
     }
 
-    // private InventoryItemBase AttachedItem
-    // {
-    //     get
-    //     {
-    //         ItemDragHandler dragHandler =
-    //         gameObject.transform.Find("ItemImage").GetComponent<ItemDragHandler>();
+    private InventoryItemBase AttachedItem
+    {
+        get
+        {
+            ItemDragHandler dragHandler =
+            gameObject.transform.Find("ItemImage").GetComponent<ItemDragHandler>();
 
-    //         return dragHandler.Item;
-    //     }
-    // }
+            return dragHandler.Item;
+        }
+    }
 
-    // public void OnItemClicked()
-    // {
-    //     InventoryItemBase item = AttachedItem;
+    public void OnItemClicked()
+    {
+        InventoryItemBase item = AttachedItem;
 
-    //     if (item != null)
-    //     {
-    //         _Inventory.UseItem(item);
-    //     }
-    // }
+        if (item != null)
+        {
+            _Inventory.UseItem(item);
+        }
+    }
 
 }

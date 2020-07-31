@@ -1,27 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Key : MonoBehaviour, IInventoryItem
+public class Key : InventoryItemBase
 {
-    public string Name 
+    public override void OnUse()
     {
-        get
-        {
-            return "Key";
-        }
-    }
-
-    public Sprite _Image;
-    public Sprite Image
-    {
-        get
-        {
-            return _Image;
-        }
-    }
-
-    public void OnPickup()
-    {
-        // TODO: Add logic what happens when axe is picked up by player
-        gameObject.SetActive(false);
+        base.OnUse();
     }
 }
