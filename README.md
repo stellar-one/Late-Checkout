@@ -70,17 +70,29 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 - Milestone 1: Mechanics (8/31/20)
 - Milestone 2: Game Logic & Features (9/30/20)
 
+The prototype will aim to have the blackout level, core mechanics, features, and game logic to be fully functional. Expected completion date: September 30th, 2020.
+
 ### First Playable
 - Milestone 3: Level Design & Assets (11/30/20)
+
+The first playable will build off of the prototype, only this time it will have a good amount of essential assets and level design done. Expected completion date: November 30th, 2020.
+
 
 ### Vertical Slice
 - Milestone 4: Alpha (2/28/21)
 
+The vertical slice will involve a lot of work towards to the first official trailor of the game. Expected completion date: February 28th, 2020.
+
+
 ### Final Build
 - Milestone 5: Beta (5/31/21)
 
+The beta will be released and have a limited capacity of players to offically start play testing it. Expected completion date: May 31st, 2020.
+
 ### Release
 - Milestone 6: Marketing (10/31/21)
+
+The game will be ready for its official release, where all that remains is the marketing behind the game. Expected completion date: October 31st, 2020.
 
 ## Additional Ideas and Possibilities
 - Player can strategically distract the enemy
