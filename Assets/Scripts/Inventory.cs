@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private const int SLOTS = 5;
+    private const int SLOTS = 9;
 
     private IList<InventorySlot> mSlots = new List<InventorySlot>();
 

@@ -15,7 +15,7 @@ public class MouseLook : MonoBehaviour
     float currentSensitivity;
     public float maxSensitivity = 100f;
     // public TextMeshProUGUI sensitivityTxt;
-    public TextMeshProUGUI iteractableTxt;
+    // public TextMeshProUGUI iteractableTxt;
 
     void Start()
     {
@@ -47,25 +47,25 @@ public class MouseLook : MonoBehaviour
 
             if(RaycastedObj.tag == "Hide")
             {
-                iteractableTxt.text = "Hide";
+                // iteractableTxt.text = "Hide";
             }
             else if(RaycastedObj.tag == "Item")
             {
-                iteractableTxt.text = "Pickup " + raycastedObj.name;
+                // iteractableTxt.text = "Pickup " + raycastedObj.name;
             }
             else if(RaycastedObj.tag == "Examine")
             {
-                iteractableTxt.text = "Examine " + raycastedObj.name;
+                // iteractableTxt.text = "Examine " + raycastedObj.name;
             }
             else
             {
-                iteractableTxt.text = raycastedObj.name;
+                // iteractableTxt.text = raycastedObj.name;
             }
         }
         else
         {
             RaycastedObj = placeHolder;
-            iteractableTxt.text = "";
+            // iteractableTxt.text = "";
             CrosshairNormal();
         }
 
