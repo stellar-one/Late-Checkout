@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private const int SLOTS = 9;
+    private const int SLOTS = 5;
 
     private IList<InventorySlot> mSlots = new List<InventorySlot>();
 

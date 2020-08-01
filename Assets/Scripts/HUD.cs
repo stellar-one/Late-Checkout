@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour {
@@ -9,7 +7,6 @@ public class HUD : MonoBehaviour {
 
     public GameObject MessagePanel;
 
-	// Use this for initialization
 	void Start () {
         Inventory.ItemAdded += InventoryScript_ItemAdded;
         Inventory.ItemRemoved += Inventory_ItemRemoved;

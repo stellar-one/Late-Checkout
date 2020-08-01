@@ -10,12 +10,12 @@ public class MouseLook : MonoBehaviour
     [SerializeField] private LayerMask layerMaskInteract;
     public Image uiCrosshair;
     public Transform playerBody;
+    public PlayerController PC;
     float xRotation = 0f;
     // public float Sensitivity { get { return currentSensitivity; } }
     float currentSensitivity;
     public float maxSensitivity = 100f;
     // public TextMeshProUGUI sensitivityTxt;
-    // public TextMeshProUGUI iteractableTxt;
 
     void Start()
     {
@@ -42,31 +42,15 @@ public class MouseLook : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 4f, layerMaskInteract.value))
         {
-            RaycastedObj = hit.collider.gameObject;
             CrosshairActive();
-
-            if(RaycastedObj.tag == "Hide")
-            {
-                // iteractableTxt.text = "Hide";
-            }
-            else if(RaycastedObj.tag == "Item")
-            {
-                // iteractableTxt.text = "Pickup " + raycastedObj.name;
-            }
-            else if(RaycastedObj.tag == "Examine")
-            {
-                // iteractableTxt.text = "Examine " + raycastedObj.name;
-            }
-            else
-            {
-                // iteractableTxt.text = raycastedObj.name;
-            }
+            RaycastedObj = hit.collider.gameObject;
+            Collider item = hit.collider;
+            PC.TryInteraction(item);
         }
         else
         {
-            RaycastedObj = placeHolder;
-            // iteractableTxt.text = "";
             CrosshairNormal();
+            RaycastedObj = placeHolder;
         }
 
     }

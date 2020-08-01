@@ -176,13 +176,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (mIsControlEnabled)
         {
             // Interact with the item
-            if (mInteractItem != null && Input.GetKeyDown(KeyCode.F))
+            if (mInteractItem != null && Input.GetKeyDown(KeyCode.Mouse0))
             {
                 // Interact animation
                 mInteractItem.OnInteractAnimation(_animator);
@@ -284,12 +283,12 @@ public class PlayerController : MonoBehaviour
 
     private InteractableItemBase mInteractItem = null;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        TryInteraction(other);
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     TryInteraction(other);
+    // }
 
-    private void TryInteraction(Collider other)
+    public void TryInteraction(Collider other)
     {
         InteractableItemBase item = other.GetComponent<InteractableItemBase>();
 
@@ -301,16 +300,21 @@ public class PlayerController : MonoBehaviour
 
                 Hud.OpenMessagePanel(mInteractItem);
             }
+            else
+            {
+                Hud.CloseMessagePanel();
+                mInteractItem = null;
+            }
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        InteractableItemBase item = other.GetComponent<InteractableItemBase>();
-        if (item != null)
-        {
-            Hud.CloseMessagePanel();
-            mInteractItem = null;
-        }
-    }
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     InteractableItemBase item = other.GetComponent<InteractableItemBase>();
+    //     if (item != null)
+    //     {
+    //         Hud.CloseMessagePanel();
+    //         mInteractItem = null;
+    //     }
+    // }
 }
