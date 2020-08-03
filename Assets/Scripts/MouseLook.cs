@@ -42,33 +42,16 @@ public class MouseLook : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 4f, layerMaskInteract.value))
         {
-            CrosshairActive();
+            uiCrosshair.color = Color.red;
             RaycastedObj = hit.collider.gameObject;
             Collider item = hit.collider;
             PC.TryInteraction(item);
         }
         else
         {
-            CrosshairNormal();
+            PC.ResetMessagePanel();
+            uiCrosshair.color = Color.white;
             RaycastedObj = placeHolder;
         }
-
     }
-
-    void CrosshairActive()
-    {
-        uiCrosshair.color = Color.red;
-    }
-
-    void CrosshairNormal()
-    {
-        uiCrosshair.color = Color.white;
-    }
-
-    // public void ChangeSensitivity(float amount)
-    // {
-    //     currentSensitivity = Mathf.Clamp(currentSensitivity + amount, 0, maxSensitivity);
-    //     sensitivityTxt.text = "Sensitivity: " + currentSensitivity.ToString();
-    // }
-
 }

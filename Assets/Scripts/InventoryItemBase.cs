@@ -13,7 +13,7 @@ public class InteractableItemBase : MonoBehaviour
 
     public Sprite Image;
 
-    public string InteractText = "Press F to pickup the item";
+    public string InteractText = "Pickup";
 
     public EItemType ItemType;
 

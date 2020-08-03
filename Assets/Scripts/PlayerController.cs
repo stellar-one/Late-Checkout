@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public float Speed = 5.0f;
 
-    public float RotationSpeed = 240.0f;
+    public float RotationSpeed = 100.0f;
 
     public Inventory Inventory;
 
@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
 
     public UnityEvent QuestCompleted;
 
-    // Use this for initialization
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -283,11 +282,6 @@ public class PlayerController : MonoBehaviour
 
     private InteractableItemBase mInteractItem = null;
 
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     TryInteraction(other);
-    // }
-
     public void TryInteraction(Collider other)
     {
         InteractableItemBase item = other.GetComponent<InteractableItemBase>();
@@ -300,21 +294,12 @@ public class PlayerController : MonoBehaviour
 
                 Hud.OpenMessagePanel(mInteractItem);
             }
-            else
-            {
-                Hud.CloseMessagePanel();
-                mInteractItem = null;
-            }
         }
     }
 
-    // private void OnTriggerExit(Collider other)
-    // {
-    //     InteractableItemBase item = other.GetComponent<InteractableItemBase>();
-    //     if (item != null)
-    //     {
-    //         Hud.CloseMessagePanel();
-    //         mInteractItem = null;
-    //     }
-    // }
+    public void ResetMessagePanel()
+    {
+        Hud.CloseMessagePanel();
+        //mInteractItem = null;
+    }
 }
