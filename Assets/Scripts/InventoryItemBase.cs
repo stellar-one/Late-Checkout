@@ -4,10 +4,7 @@ public enum EItemType
 {
     Default,
     Key,
-    Unlockable,
     Weapon,
-    Searchable,
-    Hidable,
     Examinable
 }
 

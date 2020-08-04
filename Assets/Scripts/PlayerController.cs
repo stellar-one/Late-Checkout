@@ -129,6 +129,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool IsExaminable
+    {
+        get
+        {
+            if (mCurrentItem == null)
+                return false;
+
+            return mCurrentItem.ItemType == EItemType.Examinable;
+        }
+    }
+
+    public bool IsHoldingKey
+    {
+        get
+        {
+            if (mCurrentItem == null)
+                return false;
+
+            return mCurrentItem.ItemType == EItemType.Examinable;
+        }
+    }
 
     private void Die()
     {
