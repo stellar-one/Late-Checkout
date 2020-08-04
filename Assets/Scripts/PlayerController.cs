@@ -74,8 +74,8 @@ public class PlayerController : MonoBehaviour
 
     private void Inventory_ItemUsed(object sender, InventoryEventArgs e)
     {
-        if (e.Item.ItemType != EItemType.Consumable)
-        {
+        //if (e.Item.ItemType != EItemType.Consumable)
+        //{
             // If the player carries an item, un-use it (remove from player's hand)
             if (mCurrentItem != null)
             {
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
             SetItemActive(item, true);
 
             mCurrentItem = e.Item;
-        }
+        //}
 
     }
 

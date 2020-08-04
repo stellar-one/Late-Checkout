@@ -3,8 +3,12 @@
 public enum EItemType
 {
     Default,
-    Consumable,
-    Weapon
+    Key,
+    Unlockable,
+    Weapon,
+    Searchable,
+    Hidable,
+    Examinable
 }
 
 public class InteractableItemBase : MonoBehaviour
