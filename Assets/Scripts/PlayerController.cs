@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -8,33 +6,48 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     #region Private Members
+
     private Animator _animator;
+
     private CharacterController _characterController;
+
+    private float Gravity = 20.0f;
+
+    private Vector3 _moveDirection = Vector3.zero;
+
     private InventoryItemBase mCurrentItem = null;
-    Vector3 velocity;
 
     #endregion
 
     #region Public Members
-    public float speed = 6.0f;
-    public float jumpHeight = 2.0f;
-    public float gravity = -9.81f;
-    GameObject target;
-    GameObject elevator;
+
+    public float Speed = 5.0f;
+
+    public float RotationSpeed = 100.0f;
+
     public Inventory Inventory;
+
     public GameObject Hand;
+
     public HUD Hud;
 
+    public float JumpSpeed = 7.0f;
+
+    public event EventHandler PlayerDied;
+
+
     #endregion
+
+    public UnityEvent QuestCompleted;
 
     void Start()
     {
         _animator = GetComponent<Animator>();
         _characterController = GetComponent<CharacterController>();
-
         Inventory.ItemUsed += Inventory_ItemUsed;
         Inventory.ItemRemoved += Inventory_ItemRemoved;
     }
+
 
     #region Inventory
 
@@ -61,8 +74,8 @@ public class PlayerController : MonoBehaviour
 
     private void Inventory_ItemUsed(object sender, InventoryEventArgs e)
     {
-        if (e.Item.ItemType != EItemType.Consumable)
-        {
+        //if (e.Item.ItemType != EItemType.Consumable)
+        //{
             // If the player carries an item, un-use it (remove from player's hand)
             if (mCurrentItem != null)
             {
@@ -75,7 +88,7 @@ public class PlayerController : MonoBehaviour
             SetItemActive(item, true);
 
             mCurrentItem = e.Item;
-        }
+        //}
 
     }
 
@@ -105,127 +118,153 @@ public class PlayerController : MonoBehaviour
         return mCurrentItem;
     }
 
+    public bool IsArmed
+    {
+        get
+        {
+            if (mCurrentItem == null)
+                return false;
+
+            return mCurrentItem.ItemType == EItemType.Weapon;
+        }
+    }
+
+    public bool IsExaminable
+    {
+        get
+        {
+            if (mCurrentItem == null)
+                return false;
+
+            return mCurrentItem.ItemType == EItemType.Examinable;
+        }
+    }
+
+    public bool IsHoldingKey
+    {
+        get
+        {
+            if (mCurrentItem == null)
+                return false;
+
+            return mCurrentItem.ItemType == EItemType.Examinable;
+        }
+    }
+
+    private void Die()
+    {
+        _animator.SetTrigger("death");
+
+        if (PlayerDied != null)
+        {
+            PlayerDied(this, EventArgs.Empty);
+        }
+    }
+
+    public void Talk()
+    {
+        _animator.SetTrigger("tr_talk");
+    }
+
+    private bool mIsControlEnabled = true;
+
+    public void EnableControl()
+    {
+        mIsControlEnabled = true;
+    }
+
+    public void DisableControl()
+    {
+        mIsControlEnabled = false;
+    }
+
+    private Vector3 mExternalMovement = Vector3.zero;
+
+    public Vector3 ExternalMovement
+    {
+        set
+        {
+            mExternalMovement = value;
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (mExternalMovement != Vector3.zero)
+        {
+            _characterController.Move(mExternalMovement);
+        }
+    }
+
     void Update()
     {
-        // Interact with the item
-        if (mInteractItem != null && Input.GetKeyDown(KeyCode.F))
+        if (mIsControlEnabled)
         {
-            // Interact animation
-            mInteractItem.OnInteractAnimation(_animator);
+            // Interact with the item
+            if (mInteractItem != null && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                // Interact animation
+                mInteractItem.OnInteractAnimation(_animator);
+            }
+
+            // Execute action with item
+            if (mCurrentItem != null && Input.GetMouseButtonDown(0))
+            {
+                // Dont execute click if mouse pointer is over uGUI element
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    // TODO: Logic which action to execute has to come from the particular item
+                    _animator.SetTrigger("attack_1");
+                }
+            }
+
+            // Get Input for axis
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
+
+            // Calculate the forward vector
+            Vector3 camForward_Dir = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+            Vector3 move = v * camForward_Dir + h * Camera.main.transform.right;
+
+            if (move.magnitude > 1f) move.Normalize();
+
+
+            // Calculate the rotation for the player
+            move = transform.InverseTransformDirection(move);
+
+            // Get Euler angles
+            float turnAmount = Mathf.Atan2(move.x, move.z);
+
+            transform.Rotate(0, turnAmount * RotationSpeed * Time.deltaTime, 0);
+
+            if (_characterController.isGrounded || mExternalMovement != Vector3.zero)
+            {
+                _moveDirection = transform.forward * move.magnitude;
+
+                _moveDirection *= Speed;
+
+                if (Input.GetButton("Jump"))
+                {
+                    _animator.SetBool("is_in_air", true);
+                    _moveDirection.y = JumpSpeed;
+
+                }
+                else
+                {
+                    _animator.SetBool("is_in_air", false);
+                    _animator.SetBool("run", move.magnitude > 0);
+                }
+            }
+            else
+            {
+                Gravity = 20.0f;
+            }
+
+
+            _moveDirection.y -= Gravity * Time.deltaTime;
+
+            _characterController.Move(_moveDirection * Time.deltaTime);
         }
-
-        // Execute action with item
-        if (mCurrentItem != null && Input.GetMouseButtonDown(0))
-        {
-            // Dont execute click if mouse pointer is over uGUI element
-            if (!EventSystem.current.IsPointerOverGameObject())
-            {
-                // TODO: Logic which action to execute has to come from the particular item
-                _animator.SetTrigger("attack_1");
-            }
-        }
-        
-        if(_characterController.isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        Vector3 move = transform.right * h + transform.forward * v;
-
-        _characterController.Move(move * speed * Time.deltaTime);
-
-        target = Camera.main.GetComponent<MouseLook>().RaycastedObj;
-
-        if (Input.GetKeyDown("e")) // interact key
-        {
-            if (target.CompareTag("Elevator Buttons"))
-            {
-                elevator = target;
-                target.GetComponent<Elevator>().CallElevator(target.GetComponent<Elevator>().button);
-            }
-            
-            if (target.name == "Basement")
-            {
-                elevator.GetComponent<Elevator>().CloseElevatorDoors();
-                elevator.GetComponent<Elevator>().CallElevator(0);
-            }
-            if (target.name == "Main Floor")
-            {
-                elevator.GetComponent<Elevator>().CloseElevatorDoors();
-                elevator.GetComponent<Elevator>().CallElevator(1);
-            }
-            if (target.name == "First Floor")
-            {
-                elevator.GetComponent<Elevator>().CloseElevatorDoors();
-                elevator.GetComponent<Elevator>().CallElevator(2);
-            }
-            if (target.name == "Roof")
-            {
-                elevator.GetComponent<Elevator>().CloseElevatorDoors();
-                elevator.GetComponent<Elevator>().CallElevator(3);
-            }
-
-            if (target.CompareTag("Openable") && !target.GetComponent<Animator>().GetBool("Open"))
-            {
-                Open();
-            }
-            else if (target.CompareTag("Openable") && target.GetComponent<Animator>().GetBool("Open"))
-            {
-                Close();
-            }
-
-            // if (target.CompareTag("Item"))
-            // {
-            //     IInventoryItem item = target.GetComponent<IInventoryItem>();
-            //     if(item != null)
-            //     {
-            //         inventory.AddItem(item);
-            //     }
-            // }
-
-            if (target.CompareTag("Hide"))
-            {
-                Debug.Log("Hiding");
-            }
-
-            if (target.CompareTag("Examine"))
-            {
-                Debug.Log("Examining " + target.name);
-            }
-            
-        }
-
-        if(Input.GetButtonDown("Jump") && _characterController.isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && _characterController.isGrounded)
-        {
-            speed = 8f;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftShift) && _characterController.isGrounded)
-        {
-            speed = 6f;
-        }
-
-        if(Input.GetKeyDown(KeyCode.LeftControl) && _characterController.isGrounded)
-        {
-            transform.localScale = new Vector3(1f, .5f, 1f);
-            speed = 4f;
-        }
-        else if(Input.GetKeyUp(KeyCode.LeftControl) && _characterController.isGrounded)
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            speed = 6f;
-        }
-
-        velocity.y += gravity * Time.deltaTime;
-
-        _characterController.Move(velocity * Time.deltaTime);
     }
 
     public void InteractWithItem()
@@ -264,12 +303,7 @@ public class PlayerController : MonoBehaviour
 
     private InteractableItemBase mInteractItem = null;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        TryInteraction(other);
-    }
-
-    private void TryInteraction(Collider other)
+    public void TryInteraction(Collider other)
     {
         InteractableItemBase item = other.GetComponent<InteractableItemBase>();
 
@@ -284,23 +318,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void ResetMessagePanel()
     {
-        InteractableItemBase item = other.GetComponent<InteractableItemBase>();
-        if (item != null)
-        {
-            Hud.CloseMessagePanel();
-            mInteractItem = null;
-        }
-    }
-
-    void Open()
-    {
-        target.GetComponent<Animator>().SetBool("Open", true);
-    }
-
-    void Close()
-    {
-        target.GetComponent<Animator>().SetBool("Open", false);
+        Hud.CloseMessagePanel();
+        //mInteractItem = null;
     }
 }

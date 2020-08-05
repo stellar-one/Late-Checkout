@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour {
@@ -9,7 +7,6 @@ public class HUD : MonoBehaviour {
 
     public GameObject MessagePanel;
 
-	// Use this for initialization
 	void Start () {
         Inventory.ItemAdded += InventoryScript_ItemAdded;
         Inventory.ItemRemoved += Inventory_ItemRemoved;
@@ -107,31 +104,22 @@ public class HUD : MonoBehaviour {
     public void OpenMessagePanel(InteractableItemBase item)
     {
         MessagePanel.SetActive(true);
-
         Text mpText = MessagePanel.transform.Find("Text").GetComponent<Text>();
         mpText.text = item.InteractText;
-        
-
         mIsMessagePanelOpened = true;
-
-
     }
 
     public void OpenMessagePanel(string text)
     {
         MessagePanel.SetActive(true);
-
         Text mpText = MessagePanel.transform.Find("Text").GetComponent<Text>();
         mpText.text = text;
-
-
         mIsMessagePanelOpened = true;
     }
 
     public void CloseMessagePanel()
     {
         MessagePanel.SetActive(false);
-
         mIsMessagePanelOpened = false;
     }
 }

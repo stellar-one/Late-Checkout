@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum EItemType
 {
     Default,
-    Consumable,
-    Weapon
+    Key,
+    Weapon,
+    Examinable
 }
 
 public class InteractableItemBase : MonoBehaviour
@@ -16,7 +14,7 @@ public class InteractableItemBase : MonoBehaviour
 
     public Sprite Image;
 
-    public string InteractText = "Press F to pickup the item";
+    public string InteractText = "Pickup";
 
     public EItemType ItemType;
 
