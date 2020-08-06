@@ -18,8 +18,18 @@ public class Leaf : InteractableItemBase {
         // Item is in center view
         // Player can rotate item
         
-        Player.GetComponent<Rigidbody>().constraints = mIsExaming ? RigidbodyConstraints.FreezePosition : RigidbodyConstraints.None;
+        Player.GetComponent<CharacterController>().enabled = mIsExaming ? false : true;
+        Cursor.lockState = mIsExaming ? CursorLockMode.Locked : CursorLockMode.None;
 
-        // Cursor.lockState = mIsExaming ? CursorLockMode.None : CursorLockMode.Locked;
+        if(mIsExaming)
+        {
+            Player.GetComponent<CharacterController>().enabled = false;
+
+        }
+        else
+        {
+            
+        }
+
     }
 }
