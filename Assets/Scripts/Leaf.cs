@@ -3,7 +3,7 @@
 public class Leaf : InteractableItemBase {
 
     private bool mIsExaming = false;
-    public GameObject Player;
+    public GameObject PC;
 
     public override void OnInteract()
     {
@@ -13,22 +13,20 @@ public class Leaf : InteractableItemBase {
         InteractText += mIsExaming ? this.Name : "Examine";
 
         // TODO: 
-        // Camera and player is frozen
+        // Pause player movement
         // Camera background is blurred
         // Item is in center view
         // Player can rotate item
         
-        Player.GetComponent<CharacterController>().enabled = mIsExaming ? false : true;
-        Cursor.lockState = mIsExaming ? CursorLockMode.Locked : CursorLockMode.None;
-
         if(mIsExaming)
         {
-            Player.GetComponent<CharacterController>().enabled = false;
-
+            PC.GetComponent<PlayerController>().DisableControl();
+            Camera.main.GetComponent<MouseLook>().DisableMouse();
         }
         else
         {
-            
+            PC.GetComponent<PlayerController>().EnableControl();
+            Camera.main.GetComponent<MouseLook>().EnableMouse();
         }
 
     }

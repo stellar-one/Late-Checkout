@@ -16,6 +16,7 @@ public class MouseLook : MonoBehaviour
     float currentSensitivity;
     public float maxSensitivity = 100f;
     // public TextMeshProUGUI sensitivityTxt;
+    private bool paused = false;
 
     void Start()
     {
@@ -25,33 +26,46 @@ public class MouseLook : MonoBehaviour
         placeHolder = new GameObject();
     }
 
+    public void EnableMouse()
+    {
+        paused = false;
+    }
+
+    public void DisableMouse()
+    {
+        paused = true;
+    }
+
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * currentSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * currentSensitivity * Time.deltaTime;
-
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
-
-        RaycastHit hit;
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 4f, layerMaskInteract.value))
+        if (!paused)
         {
-            uiCrosshair.color = Color.red;
-            RaycastedObj = hit.collider.gameObject;
-            Collider item = hit.collider;
-            PC.TryInteraction(item);
-        }
-        else
-        {
-            PC.ResetMessagePanel();
-            uiCrosshair.color = Color.white;
-            RaycastedObj = placeHolder;
+            float mouseX = Input.GetAxis("Mouse X") * currentSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * currentSensitivity * Time.deltaTime;
+
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseX);
+
+            RaycastHit hit;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 4f, layerMaskInteract.value))
+            {
+                uiCrosshair.color = Color.red;
+                RaycastedObj = hit.collider.gameObject;
+                Collider item = hit.collider;
+                PC.TryInteraction(item);
+            }
+            else
+            {
+                PC.ResetMessagePanel();
+                uiCrosshair.color = Color.white;
+                RaycastedObj = placeHolder;
+            }
         }
     }
 }
