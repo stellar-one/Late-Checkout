@@ -35,10 +35,9 @@ public class PlayerController : MonoBehaviour
 
     public event EventHandler PlayerDied;
 
-
-    #endregion
-
     public UnityEvent QuestCompleted;
+    
+    #endregion
 
     void Start()
     {
@@ -146,14 +145,12 @@ public class PlayerController : MonoBehaviour
 
     private bool mIsControlEnabled = true;
 
-    public void EnableControl()
+    public bool IsControlEnabled
     {
-        mIsControlEnabled = true;
-    }
-
-    public void DisableControl()
-    {
-        mIsControlEnabled = false;
+        set
+        {
+            mIsControlEnabled = value;
+        }
     }
 
     private Vector3 mExternalMovement = Vector3.zero;
@@ -201,8 +198,9 @@ public class PlayerController : MonoBehaviour
             float v = Input.GetAxis("Vertical");
 
             // Calculate the forward vector
-            Vector3 camForward_Dir = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
-            Vector3 move = v * camForward_Dir + h * Camera.main.transform.right;
+            // Vector3 camForward_Dir = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+            // Vector3 move = v * camForward_Dir + h * Camera.main.transform.right;
+            Vector3 move = transform.right * h + transform.forward * v;
 
             if (move.magnitude > 1f) move.Normalize();
 

@@ -20,12 +20,12 @@ public class Leaf : InteractableItemBase {
         
         if(mIsExaming)
         {
-            PC.GetComponent<PlayerController>().DisableControl();
+            PC.GetComponent<PlayerController>().IsControlEnabled = false;
             Camera.main.GetComponent<MouseLook>().DisableMouse();
         }
         else
         {
-            PC.GetComponent<PlayerController>().EnableControl();
+            PC.GetComponent<PlayerController>().IsControlEnabled = true;
             Camera.main.GetComponent<MouseLook>().EnableMouse();
         }
 
