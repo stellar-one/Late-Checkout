@@ -30,9 +30,6 @@ UI will be very minimal and simple, nothing fancy. Sound will be a lot like othe
 ![Cover Art](https://cdn.discordapp.com/attachments/737396307853049916/737689201683857458/image0.jpg)
 ![Sleep Paralysis Demon](https://cdn.discordapp.com/attachments/737396307853049916/737687850853859398/image0.jpg)
 ![Motel Hallway](https://cdn.discordapp.com/attachments/737396307853049916/737688662942285944/image0.jpg)
-![Motel Snowed In](https://cdn.discordapp.com/attachments/737396307853049916/737690230819389480/image0.jpg)
-![Motel Snowed In 2](https://cdn.discordapp.com/attachments/737396307853049916/737690029702512731/image0.jpg)
-![Motel Room](https://cdn.discordapp.com/attachments/737396307853049916/737689889595850885/image0.jpg)
 
 ## Systematic Breakdown of Components
 3D Renderer, Save/Load System, State Machine, UI System, Sound Effects, and AI.
