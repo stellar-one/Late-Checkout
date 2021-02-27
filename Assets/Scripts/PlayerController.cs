@@ -67,9 +67,17 @@ public class PlayerController : MonoBehaviour
 
             if (target.CompareTag("Inspect"))
             {
-                Debug.Log("Inspecting item");
-                //cc.enabled = false;
+                if (cc.enabled)
+                {
+                    Debug.Log("Inspecting item");
+                    cc.enabled = false;
+                }
                 
+                else if (!cc.enabled)
+                {
+                    Debug.Log("Stopped inspecting item");
+                    cc.enabled = true;
+                }
             }
             
         }
