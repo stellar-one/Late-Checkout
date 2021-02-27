@@ -39,7 +39,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("e")) // interact key
         {
-            if (target.CompareTag("Elevator Buttons"))
+            if (target.CompareTag("Use"))
+            {
+                Debug.Log("Using item...");
+                // use item by case
+                target.SetActive(false);
+            }
+
+            if (target.CompareTag("Elevator Buttons")) // can this be dedicated to the elevator script?
             {
                 Debug.Log("Calling Elevator...");
                 target.GetComponent<Elevator>().CallElevator(target.GetComponent<Elevator>().button);                
@@ -59,7 +66,7 @@ public class PlayerController : MonoBehaviour
                 // target.GetComponent<Animator>().SetBool("Open", false);
             }
 
-            if (target.CompareTag("Item"))
+            if (target.CompareTag("Item")) // change tag to "pickup"
             {
                 Debug.Log("Picking up item...");
                 target.SetActive(false);
@@ -83,10 +90,10 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        // if(Input.GetButtonDown("Jump") && isGrounded)
-        // {
-        //     Jump();
-        // }
+        if(Input.GetButtonDown("Jump") && isGrounded)
+        {
+            Jump();
+        }
 
         // if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded)
         // {
@@ -111,10 +118,10 @@ public class PlayerController : MonoBehaviour
         cc.Move(velocity * Time.deltaTime);
     }
 
-    // void Jump()
-    // {
-    //     velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
-    // }
+    void Jump()
+    {
+        velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
+    }
 
     // void Sprint()
     // {
