@@ -41,14 +41,18 @@ public class PlayerController : MonoBehaviour
                 target.GetComponent<Elevator>().CallElevator(target.GetComponent<Elevator>().button);                
             }
 
-            if (target.CompareTag("Openable") && !target.GetComponent<Animator>().GetBool("Open"))
+            if (target.CompareTag("Openable")) // && !target.GetComponent<Animator>().GetBool("Open"))
             {
-                target.GetComponent<Animator>().SetBool("Open", true);
+                Debug.Log("Opening...");
+                target.tag = "Closable";
+                // target.GetComponent<Animator>().SetBool("Open", true);
             }
 
-            else if (target.CompareTag("Openable") && target.GetComponent<Animator>().GetBool("Open"))
+            else if (target.CompareTag("Closable")) // && target.GetComponent<Animator>().GetBool("Open"))
             {
-                target.GetComponent<Animator>().SetBool("Open", false);
+                Debug.Log("Closing...");
+                target.tag = "Openable";
+                // target.GetComponent<Animator>().SetBool("Open", false);
             }
 
             if (target.CompareTag("Item"))
@@ -60,15 +64,15 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
-        {
-            Jump();
-        }
+        // if(Input.GetButtonDown("Jump") && isGrounded)
+        // {
+        //     Jump();
+        // }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded)
-        {
-            Sprint();
-        }
+        // if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded)
+        // {
+        //     Sprint();
+        // }
         else if (Input.GetKeyUp(KeyCode.LeftShift) && isGrounded)
         {
             Walk();
@@ -88,15 +92,15 @@ public class PlayerController : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    void Jump()
-    {
-        velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
-    }
+    // void Jump()
+    // {
+    //     velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
+    // }
 
-    void Sprint()
-    {
-        speed = 8f;
-    }
+    // void Sprint()
+    // {
+    //     speed = 8f;
+    // }
 
     void Walk()
     {
