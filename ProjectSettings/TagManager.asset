@@ -8,6 +8,9 @@ TagManager:
   - Openable
   - Item
   - Elevator
+  - Closable
+  - Inspect
+  - Use
   layers:
   - Default
   - TransparentFX
