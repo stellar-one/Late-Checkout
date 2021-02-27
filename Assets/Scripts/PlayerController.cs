@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
-using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterController controller;
+    CharacterController cc;
     public LayerMask groundMask;
     public Transform groundCheck;
     Vector3 velocity;
-    public float speed = 6f;
-    public float jumpHeight = 2f;
-    public float gravity = -9.81f;
-    public float groundDistance = 0.4f;
+    float speed = 6f;
+    float jumpHeight = 2f;
+    float gravity = -9.81f;
+    float groundDistance = 0.4f;
     bool isGrounded;
     GameObject target;
+
+    void Start()
+    {
+        cc = GetComponent<CharacterController>();
+    }
     
 
     void Update()
@@ -29,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        cc.Move(move * speed * Time.deltaTime);
 
         target = Camera.main.GetComponent<MouseLook>().RaycastedObj;
 
@@ -60,6 +64,13 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Picking up item...");
                 target.SetActive(false);
             }
+
+            if (target.CompareTag("Inspect"))
+            {
+                Debug.Log("Inspecting item");
+                //cc.enabled = false;
+                
+            }
             
         }
 
@@ -89,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
 
-        controller.Move(velocity * Time.deltaTime);
+        cc.Move(velocity * Time.deltaTime);
     }
 
     // void Jump()
